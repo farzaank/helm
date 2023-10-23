@@ -71,7 +71,7 @@ export default function LeaderboardTables({
 		if (sortFirstMetric && activeSortColumn) {
 			handleSort(activeSortColumn);
 		}
-	}, []);
+	});
 
 	return (
 		<div className="rounded-lg overflow-hidden shadow-md bg-white p-4">
