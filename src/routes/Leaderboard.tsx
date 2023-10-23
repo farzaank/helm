@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PageTitle from "@/components/PageTitle";
 import Tab from "@/components/Tab";
 import Tabs from "@/components/Tabs";
-import LeaderboardTables from "@/components/Leaderboardtables";
+import LeaderboardTables from "@/components/LeaderboardTables";
 import type GroupsTable from "@/types/GroupsTable";
 import type GroupMetadata from "@/types/GroupMetadata";
 import getGroupsTablesByName from "@/services/getGroupTablesByName";

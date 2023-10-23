@@ -8,7 +8,6 @@ interface Props {
 	activeGroup: number;
 	ignoreHref?: boolean;
 	sortable?: boolean;
-	sortFirstMetric?: boolean;
 }
 
 export default function GroupsTables({
@@ -16,11 +15,10 @@ export default function GroupsTables({
 	activeGroup,
 	ignoreHref = false,
 	sortable = true,
-	sortFirstMetric = true,
 }: Props) {
-	const [activeSortColumn, setActiveSortColumn] = useState<number | undefined>(
-		sortFirstMetric ? 1 : undefined
-	);
+	const [activeSortColumn, setActiveSortColumn] = useState<
+		number | undefined
+	>();
 	const [activeGroupsTable, setActiveGroupsTable] = useState<GroupsTable>({
 		...groupsTables[activeGroup],
 	});
@@ -67,11 +65,6 @@ export default function GroupsTables({
 			return group;
 		});
 	};
-	useEffect(() => {
-		if (sortFirstMetric && activeSortColumn) {
-			handleSort(activeSortColumn);
-		}
-	}, []);
 
 	return (
 		<div className="overflow-x-auto">
