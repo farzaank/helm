@@ -17,5 +17,5 @@ export default defineConfig({
   build: {
     outDir: `./static_build`,
   },
-  base: "/helm/", // + 'v0.2.4' or process.env.HELM_SUITE
+  base: "/helm/" + 'v0.2.4'// or process.env.HELM_SUITE
 });
