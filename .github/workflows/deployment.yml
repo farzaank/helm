@@ -2,15 +2,7 @@ name: Frontend
 
 on:
   push:
-    branches:
-      - '*'
-    paths:
-      - '/**'
-  pull_request:
-    branches:
-      - '*'
-    paths:
-      - '/**'
+    branches: [ main ]
 
 jobs:
   test:
@@ -23,23 +15,18 @@ jobs:
       with:
         node-version: '18'
     - name: Install dependencies
-      working-directory: ./src/helm-frontend
       run: npm ci
     - name: Run lint
-      working-directory: ./src/helm-frontend
       run: npm run lint
     - name: Run check format
-      working-directory: ./src/helm-frontend
       run: npm run format:check
     - name: Run tests
-      working-directory: ./src/helm-frontend
       run: npm run test
 
   build:
     runs-on: ubuntu-latest
     # Deploy to only run on pushes to master
-    # if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    if: github.event_name == 'push' && github.ref == 'refs/heads/react_frontend'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: test
     environment:
       name: github-pages
@@ -54,15 +41,9 @@ jobs:
       with:
         node-version: '18'
     - name: Install dependencies
-      working-directory: ./src/helm-frontend
       run: npm ci
     - name: Build app
-      working-directory: ./src/helm-frontend
       run: npm run build
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v2
-      with:
-        path: ./src/helm/benchmark/static_build/
 
   deploy:
     runs-on: ubuntu-latest
