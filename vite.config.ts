@@ -15,7 +15,7 @@ export default defineConfig({
     environment: "jsdom",
   },
   build: {
-    outDir: `${__dirname}/../helm/benchmark/static_build`,
+    outDir: `./static_build`,
   },
   base: "/helm/" + process.env.VITE_HELM_BENCHMARKS_SUITE,
 });
