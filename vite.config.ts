@@ -17,5 +17,5 @@ export default defineConfig({
   build: {
     outDir: `./static_build`,
   },
-  base: "/helm/" + process.env.VITE_HELM_BENCHMARKS_SUITE,
+  base: "/helm/" + 'v0.2.4',
 });
