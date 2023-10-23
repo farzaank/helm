@@ -2,15 +2,7 @@ name: Frontend
 
 on:
   push:
-    branches:
-      - '*'
-    paths:
-      - './**'
-  pull_request:
-    branches:
-      - '*'
-    paths:
-      - './**'
+    branches: [ main ]
 
 jobs:
   test:
@@ -23,16 +15,12 @@ jobs:
       with:
         node-version: '18'
     - name: Install dependencies
-      working-directory: ./
       run: npm ci
     - name: Run lint
-      working-directory: ./
       run: npm run lint
     - name: Run check format
-      working-directory: ./
       run: npm run format:check
     - name: Run tests
-      working-directory: ./
       run: npm run test
 
   build:
@@ -53,10 +41,8 @@ jobs:
       with:
         node-version: '18'
     - name: Install dependencies
-      working-directory: ./
       run: npm ci
     - name: Build app
-      working-directory: ./
       run: npm run build
 
   deploy:
