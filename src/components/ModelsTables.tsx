@@ -1,34 +1,32 @@
 import { useEffect, useState } from "react";
 import { ChevronUpDownIcon } from "@heroicons/react/24/solid";
-import type GroupsTable from "@/types/GroupsTable";
+import type ModelsTable from "@/types/ModelsTable";
 import RowValue from "@/components/RowValue";
 
 interface Props {
-	groupsTables: GroupsTable[];
-	activeGroup: number;
+	modelsTables: ModelsTable[];
+	activeModel: number;
 	ignoreHref?: boolean;
 	sortable?: boolean;
-	sortFirstMetric?: boolean;
 }
 
-export default function GroupsTables({
-	groupsTables,
-	activeGroup,
+export default function ModelsTables({
+	modelsTables,
+	activeModel,
 	ignoreHref = false,
 	sortable = true,
-	sortFirstMetric = true,
 }: Props) {
-	const [activeSortColumn, setActiveSortColumn] = useState<number | undefined>(
-		sortFirstMetric ? 1 : undefined
-	);
-	const [activeGroupsTable, setActiveGroupsTable] = useState<GroupsTable>({
-		...groupsTables[activeGroup],
+	const [activeSortColumn, setActiveSortColumn] = useState<
+		number | undefined
+	>();
+	const [activemodelsTable, setActiveModelsTable] = useState<ModelsTable>({
+		...modelsTables[activeModel],
 	});
 	const [sortDirection, setSortDirection] = useState<number>(1);
 
 	useEffect(() => {
-		setActiveGroupsTable({ ...groupsTables[activeGroup] });
-	}, [activeGroup, groupsTables]);
+		setActiveModelsTable({ ...modelsTables[activeModel] });
+	}, [activeModel, modelsTables]);
 
 	const handleSort = (columnIndex: number) => {
 		let sort = sortDirection;
@@ -40,7 +38,7 @@ export default function GroupsTables({
 		setActiveSortColumn(columnIndex);
 		setSortDirection(sort);
 
-		setActiveGroupsTable((prev) => {
+		setActiveModelsTable((prev) => {
 			const group = { ...prev };
 			group.rows.sort((a, b) => {
 				const av = a[columnIndex]?.value;
@@ -67,20 +65,15 @@ export default function GroupsTables({
 			return group;
 		});
 	};
-	useEffect(() => {
-		if (sortFirstMetric && activeSortColumn) {
-			handleSort(activeSortColumn);
-		}
-	}, []);
 
 	return (
 		<div className="overflow-x-auto">
 			<table className="table">
 				<thead>
 					<tr>
-						{activeGroupsTable.header.map((headerValue, idx) => (
+						{activemodelsTable.header.map((headerValue, idx) => (
 							<th
-								key={`${activeGroup}-${idx}`}
+								key={`${activeModel}-${idx}`}
 								className={`${
 									idx === activeSortColumn ? "bg-gray-100 " : ""
 								} whitespace-nowrap`}
@@ -98,11 +91,11 @@ export default function GroupsTables({
 					</tr>
 				</thead>
 				<tbody>
-					{activeGroupsTable.rows.map((row, idx) => (
-						<tr key={`${activeGroup}-${idx}`}>
+					{activemodelsTable.rows.map((row, idx) => (
+						<tr key={`${activeModel}-${idx}`}>
 							{row.map((rowValue, idx) => (
 								<td
-									key={`${activeGroup}-${idx}`}
+									key={`${activeModel}-${idx}`}
 									className={`${idx == 0 ? "text-lg" : ""}${
 										activeSortColumn === idx ? " bg-gray-100" : ""
 									}`}

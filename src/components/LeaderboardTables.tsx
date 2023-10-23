@@ -11,7 +11,7 @@ interface Props {
 	sortFirstMetric?: boolean;
 }
 
-export default function GroupsTables({
+export default function LeaderboardTables({
 	groupsTables,
 	activeGroup,
 	ignoreHref = false,
@@ -74,49 +74,54 @@ export default function GroupsTables({
 	}, []);
 
 	return (
-		<div className="overflow-x-auto">
-			<table className="table">
-				<thead>
-					<tr>
-						{activeGroupsTable.header.map((headerValue, idx) => (
-							<th
-								key={`${activeGroup}-${idx}`}
-								className={`${
-									idx === activeSortColumn ? "bg-gray-100 " : ""
-								} whitespace-nowrap`}
-							>
-								<div className="flex gap-2 items-center">
-									<span>{headerValue.value}</span>
-									{sortable ? (
-										<button className="link" onClick={() => handleSort(idx)}>
-											<ChevronUpDownIcon className="w-6 h-6" />
-										</button>
-									) : null}
-								</div>
-							</th>
-						))}
-					</tr>
-				</thead>
-				<tbody>
-					{activeGroupsTable.rows.map((row, idx) => (
-						<tr key={`${activeGroup}-${idx}`}>
-							{row.map((rowValue, idx) => (
-								<td
+		<div className="rounded-lg overflow-hidden shadow-md bg-white p-4">
+			<div className="overflow-x-auto">
+				<table className="table w-full px-4">
+					<thead>
+						<tr>
+							{activeGroupsTable.header.map((headerValue, idx) => (
+								<th
 									key={`${activeGroup}-${idx}`}
-									className={`${idx == 0 ? "text-lg" : ""}${
-										activeSortColumn === idx ? " bg-gray-100" : ""
-									}`}
+									className={`${
+										idx === activeSortColumn ? "bg-gray-100" : ""
+									} whitespace-nowrap px-4`}
 								>
-									<RowValue
-										ignoreHref={ignoreHref && idx === 0}
-										value={rowValue}
-									/>
-								</td>
+									<div className="flex gap-2 items-center">
+										<span>{headerValue.value}</span>
+										{sortable ? (
+											<button className="link" onClick={() => handleSort(idx)}>
+												<ChevronUpDownIcon className="w-6 h-6" />
+											</button>
+										) : null}
+									</div>
+								</th>
 							))}
 						</tr>
-					))}
-				</tbody>
-			</table>
+					</thead>
+					<tbody>
+						{activeGroupsTable.rows.map((row, idx) => (
+							<tr
+								key={`${activeGroup}-${idx}`}
+								className={`${idx % 2 === 0 ? "bg-gray-50" : ""}`}
+							>
+								{" "}
+								{/* Added alternating row highlighting */}
+								{row.map((rowValue, cellIdx) => (
+									<td
+										key={`${activeGroup}-${cellIdx}`}
+										className={`${cellIdx === 0 ? "text-lg" : ""}`}
+									>
+										<RowValue
+											ignoreHref={ignoreHref && cellIdx === 0}
+											value={rowValue}
+										/>
+									</td>
+								))}
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
 		</div>
 	);
 }
