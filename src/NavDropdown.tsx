@@ -8,18 +8,28 @@ function NavDropdown() {
     <div className="relative inline-block text-left">
       <button
         onClick={() => setDropdownOpen(!dropdownOpen)}
-        className="inline-flex justify-center w-full px-4 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+        className="inline-flex items-center justify-center w-full px-4 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
       >
-        <div
-          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-          role="menuitem"
+        <img
+          src="https://mkly.github.io/helm/assets/helm-logo-193a9baf.png"
+          alt="Image 1"
+          className="w-full h-24 object-cover"
+        />
+        {/* Chevron SVG */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6 ml-2" // size and margin of the chevron
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
         >
-          <img
-            src="https://mkly.github.io/helm/assets/helm-logo-193a9baf.png"
-            alt="Image 1"
-            className="w-full h-24 object-cover"
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
           />
-        </div>
+        </svg>
       </button>
 
       {dropdownOpen && (
