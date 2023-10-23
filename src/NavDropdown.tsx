@@ -44,11 +44,13 @@ function NavDropdown() {
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
               role="menuitem"
             >
-              <img
-                src="https://mkly.github.io/helm/assets/helm-logo-193a9baf.png"
-                alt="Image 1"
-                className="w-full h-24 object-cover"
-              />
+              <Link to="https://crfm.stanford.edu/helm/latest/?">
+                <img
+                  src="https://mkly.github.io/helm/assets/helm-logo-193a9baf.png"
+                  alt="Image 1"
+                  className="w-full h-24 object-cover"
+                />
+              </Link>
             </div>
             <div
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
