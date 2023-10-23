@@ -71,7 +71,8 @@ export default function LeaderboardTables({
     if (sortFirstMetric && activeSortColumn) {
       handleSort(activeSortColumn);
     }
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sortFirstMetric, activeSortColumn]);
 
   return (
     <div className="rounded-lg overflow-hidden shadow-md bg-white p-4">
