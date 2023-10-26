@@ -49,7 +49,6 @@ function NavDropdown() {
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
               role="menuitem"
             >
-<<<<<<< HEAD:src/components/NavDropdown.tsx
               <Link to="/">
                 <img
                   src="https://crfm.stanford.edu/helm/v0.3.0/images/helm-logo-simple.png"
@@ -57,13 +56,6 @@ function NavDropdown() {
                   className="w-full h-12 object-cover"
                 />
               </Link>
-=======
-              <img
-                src="https://mkly.github.io/helm/assets/helm-logo-193a9baf.png"
-                alt="Image 1"
-                className="w-full h-24 object-cover"
-              />
->>>>>>> parent of 2938631 (fix glitch2):src/NavDropdown.tsx
             </div>
             <div
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
