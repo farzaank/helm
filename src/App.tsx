@@ -9,10 +9,13 @@ import Runs from "@/routes/Runs";
 import Run from "@/routes/Run";
 import Landing from "@/routes/Landing";
 import Leaderboard from "@/routes/Leaderboard";
+
 export default function App() {
-  console.log();
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-explicit-any
+  const legacyRelease = (window as any).LEGACY_RELEASE;
+
   return (
-    <Router basename={"/" + window.LEGACY_RELEASE}>
+    <Router basename={"/" + legacyRelease}>
       <Routes>
         <Route element={<Layout />}>
           <Route path={"/"} element={<Landing />} />
