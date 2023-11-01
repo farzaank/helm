@@ -10,8 +10,9 @@ import Run from "@/routes/Run";
 import Landing from "@/routes/Landing";
 import Leaderboard from "@/routes/Leaderboard";
 export default function App() {
+  console.log();
   return (
-    <Router>
+    <Router basename={"/" + window.LEGACY_RELEASE}>
       <Routes>
         <Route element={<Layout />}>
           <Route path={"/"} element={<Landing />} />
