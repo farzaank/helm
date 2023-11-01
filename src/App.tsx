@@ -13,6 +13,7 @@ import Leaderboard from "@/routes/Leaderboard";
 export default function App() {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-explicit-any
   const legacyRelease = (window as any).LEGACY_RELEASE;
+  console.log(legacyRelease);
 
   return (
     <Router basename={"/" + legacyRelease}>
