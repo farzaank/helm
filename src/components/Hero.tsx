@@ -19,9 +19,9 @@ export default function Hero() {
           , providing standardized evaluations with multiple metrics and open
           access.
         </h1>
-        <div className="flex justify-end w-1/4 ">
+        <div className="flex justify-end w-1/4">
           <Link to="leaderboard">
-            <button className="px-10 btn btn-grey rounded-md">
+            <button className="px-6 btn btn-grey rounded-md">
               <body>Visit Leaderboard</body>
             </button>
           </Link>
