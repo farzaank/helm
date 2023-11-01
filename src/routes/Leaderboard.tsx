@@ -9,6 +9,7 @@ import getGroupsTablesByName from "@/services/getGroupTablesByName";
 import getGroupsMetadata from "@/services/getGroupsMetadata";
 import Loading from "@/components/Loading";
 import getGroupsTables from "@/services/getGroupsTables";
+import Alert from "@/components/Alert";
 
 interface GroupDisplayData {
   title: string;
@@ -98,6 +99,7 @@ export default function Leaderboard() {
 
   return (
     <>
+      <Alert />
       <div className="flex flex-row justify-between">
         <PageTitle
           title={"Leaderboard"}

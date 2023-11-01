@@ -53,6 +53,8 @@ export default function Scenarios() {
     return <Loading />;
   }
 
+  console.log(runGroups);
+
   return (
     <>
       <PageTitle

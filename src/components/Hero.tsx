@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <div className="flex px-4 py-36">
+    <div className="flex px-4 py-10">
       {/* Left side content */}
       <div className="flex-1 p-4 flex flex-col justify-center">
         {" "}
