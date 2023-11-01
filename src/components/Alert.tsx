@@ -3,6 +3,8 @@ import Link from "./Link";
 
 export default function Alert() {
   const [visible, setVisible] = useState(true);
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-explicit-any
+  const legacyRelease = (window as any).LEGACY_RELEASE;
 
   const handleClose = () => {
     setVisible(false);
@@ -19,7 +21,7 @@ export default function Alert() {
             Welcome to the new results view,
           </strong>
           <span className="block sm:inline"> for the old view, </span>
-          <Link to="/groups">
+          <Link to={"/" + legacyRelease + "/groups"}>
             <a className="underline text-gray-700 mr-2">click here</a>
           </Link>
         </div>
