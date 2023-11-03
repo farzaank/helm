@@ -17,5 +17,5 @@ export default defineConfig({
   build: {
     outDir: `./static_build`,
   },
-  base: "/helm/" // can't add process.env.HELM_SUITE here with GH pages 
+  //base: "/helm/" // removing for new build method can't add process.env.HELM_SUITE here with GH pages 
 });
