@@ -11,7 +11,8 @@ export default async function getDisplayPredictionsByName(
     if (suite) {
       const displayPrediction = await fetch(
         getBenchmarkEndpoint(
-          `/benchmark_output/runs/${suite}/${runName}/display_predictions.json`),
+          `/benchmark_output/runs/${suite}/${runName}/display_predictions.json`,
+        ),
         { signal },
       );
 
@@ -19,7 +20,8 @@ export default async function getDisplayPredictionsByName(
     } else {
       const displayPrediction = await fetch(
         getBenchmarkEndpoint(
-          `/benchmark_output/runs/${getBenchmarkSuite()}/${runName}/display_predictions.json`),
+          `/benchmark_output/runs/${getBenchmarkSuite()}/${runName}/display_predictions.json`,
+        ),
         { signal },
       );
 

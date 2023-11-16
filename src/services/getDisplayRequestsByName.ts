@@ -11,7 +11,8 @@ export default async function getDisplayRequestsByName(
     if (suite) {
       const displayRequest = await fetch(
         getBenchmarkEndpoint(
-          `/benchmark_output/runs/${suite}/${runName}/display_requests.json`),
+          `/benchmark_output/runs/${suite}/${runName}/display_requests.json`,
+        ),
         { signal },
       );
 
@@ -19,7 +20,8 @@ export default async function getDisplayRequestsByName(
     } else {
       const displayRequest = await fetch(
         getBenchmarkEndpoint(
-          `/benchmark_output/runs/${getBenchmarkSuite()}/${runName}/display_requests.json`),
+          `/benchmark_output/runs/${getBenchmarkSuite()}/${runName}/display_requests.json`,
+        ),
         { signal },
       );
 
