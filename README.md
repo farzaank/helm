@@ -36,6 +36,10 @@ npm run test
 npm run build
 ```
 
+### Deployment
+
+For deployment, you can use the build directory out of the box (using the previous command), but will have to replace every leading / in href and src in order for deploys to GitHub Pages to work correctly.
+
 ### Linting
 
 ```bash
