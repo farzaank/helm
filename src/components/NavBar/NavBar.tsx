@@ -20,7 +20,7 @@ export default function NavBar() {
             className="menu menu-lg dropdown-content mt-3 z-[1] p-2 bg-base-100 shadow"
           >
             <li>
-              <Link to="leaderboard">Leaderboard</Link>
+              <Link to="">Leaderboard</Link>
             </li>
             <li>
               <Link to="models">Models</Link>
@@ -45,7 +45,7 @@ export default function NavBar() {
       <div className="flex-none hidden md:block">
         <ul className="flex flex-row gap-6 px-1">
           <li>
-            <Link to="leaderboard">Leaderboard</Link>
+            <Link to="">Leaderboard</Link>
           </li>
           <li>
             <Link to="models">Models</Link>

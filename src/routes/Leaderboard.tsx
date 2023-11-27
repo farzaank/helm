@@ -17,7 +17,7 @@ interface GroupDisplayData {
 
 export default function Leaderboard() {
   const defaultGroup = { title: "Core Scenarios", name: "core_scenarios" };
-  //const defaultGroup.name = "core_scenarios";
+  const [verbose, setVerbose] = useState<boolean>(false);
   const [allGroupData, setAllGroupData] = useState<GroupDisplayData[]>([]);
   const [selectedGroupDisplayData, setSelectedGroupDisplayData] =
     useState(defaultGroup);
@@ -96,59 +96,158 @@ export default function Leaderboard() {
     );
   }
 
+  const handleToggleVerbose = () => {
+    setVerbose(!verbose);
+  };
+
   return (
     <>
-      <div className="flex flex-row justify-between">
-        <PageTitle
-          title={"Leaderboard"}
-          subtitle={
-            "The leaderboard shows how the various models (with particular adaptation procedures) perform across different groups of scenarios and different metrics."
-          }
-          markdown={true}
-          className="mr-8 mb-16"
-        />
-        <div className="w-64 py-10 ">
-          <label
-            htmlFor="group"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Select a group:
-          </label>
-          <select
-            id="group"
-            name="group"
-            value={selectedGroupDisplayData.title}
-            onChange={(e) => updateLeaderboard(allGroupData, e.target.value)}
-            className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring focus:border-blue-300 rounded-md"
-          >
-            {allGroupData.map((group, index) => (
-              <option key={index} value={group.title}>
-                {group.title}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
-      <div className="overflow-x-auto">
-        {groupsTables.length > 1 ? (
-          <Tabs>
-            {groupsTables.map((groupsTable, idx) => (
-              <Tab
-                key={idx}
-                active={idx === activeGroup}
-                onClick={() => setActiveGroup(idx)}
+      {verbose ? (
+        <>
+          <div className="flex flex-row justify-between">
+            <PageTitle
+              title={"HELM Leaderboard"}
+              subtitle={
+                "HELM is a framework for evaluating foundation models. Our leaderboard shows how the various models (with particular adaptation procedures) perform across different groups of scenarios and different metrics."
+              }
+              markdown={true}
+              className="mr-8 mb-16"
+            />
+            <div className="w-64 py-10 ">
+              <label
+                htmlFor="group"
+                className="block text-sm font-medium text-gray-700"
               >
-                {groupsTable.title}
-              </Tab>
-            ))}
-          </Tabs>
-        ) : null}
-      </div>
-      <LeaderboardTables
-        groupsTables={groupsTables}
-        activeGroup={activeGroup}
-        ignoreHref={true}
-      />
+                Select a group:
+              </label>
+              <select
+                id="group"
+                name="group"
+                value={selectedGroupDisplayData.title}
+                onChange={(e) =>
+                  updateLeaderboard(allGroupData, e.target.value)
+                }
+                className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring focus:border-blue-300 rounded-md"
+              >
+                {allGroupData.map((group, index) => (
+                  <option key={index} value={group.title}>
+                    {group.title}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="flex justify-end items-center mb-4">
+              <div className="pl-5">
+                <label htmlFor="verbose-toggle" className="mr-2">
+                  Show All?
+                </label>
+              </div>
+              <div className="p-5">
+                <input
+                  id="verbose-toggle"
+                  type="checkbox"
+                  checked={verbose}
+                  onChange={handleToggleVerbose}
+                  className="toggle toggle-accent"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="overflow-x-auto">
+            {groupsTables.length > 1 ? (
+              <Tabs>
+                {groupsTables.map((groupsTable, idx) => (
+                  <Tab
+                    key={idx}
+                    active={idx === activeGroup}
+                    onClick={() => setActiveGroup(idx)}
+                  >
+                    {groupsTable.title}
+                  </Tab>
+                ))}
+              </Tabs>
+            ) : null}
+          </div>
+          <LeaderboardTables
+            groupsTables={groupsTables}
+            activeGroup={activeGroup}
+            ignoreHref={true}
+          />
+        </>
+      ) : (
+        <>
+          <div className="flex flex-row justify-between">
+            <PageTitle
+              title={"HELM Leaderboard"}
+              subtitle={
+                "HELM is a framework for evaluating foundation models. Our leaderboard shows how the various models (with particular adaptation procedures) perform across different groups of scenarios and different metrics."
+              }
+              markdown={true}
+              className="mr-8 mb-16"
+            />
+            <div className="w-64 py-10 ">
+              <label
+                htmlFor="group"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Selected Group:
+              </label>
+              <select
+                id="group"
+                name="group"
+                value={selectedGroupDisplayData.title}
+                onChange={(e) =>
+                  updateLeaderboard(allGroupData, e.target.value)
+                }
+                disabled
+                className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring focus:border-blue-300 rounded-md"
+              >
+                {allGroupData.map((group, index) => (
+                  <option key={index} value={group.title}>
+                    {"Core Leaderboard"}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="flex justify-end items-center mb-4">
+              <div className="pl-5">
+                <label htmlFor="verbose-toggle" className="mr-2">
+                  Show All?
+                </label>
+              </div>
+              <div className="p-5">
+                <input
+                  id="verbose-toggle"
+                  type="checkbox"
+                  checked={verbose}
+                  onChange={handleToggleVerbose}
+                  className="toggle toggle-accent"
+                />
+              </div>
+            </div>
+          </div>
+          <LeaderboardTables
+            groupsTables={groupsTables}
+            activeGroup={activeGroup}
+            ignoreHref={true}
+            filtered
+            filteredModels={[
+              "Llama 2 (70B)",
+              "LLaMA (65B)",
+              "text-davinci-002",
+              "Mistral v0.1 (7B)",
+              "Cohere Command beta (52.4B)",
+              "text-davinci-003",
+              "Jurassic-2 Jumbo (178B)",
+              "Llama 2 (13B)",
+              "gpt-3.5-turbo-0613",
+              "LLaMA (30B)",
+            ]}
+          />
+        </>
+      )}
     </>
   );
 }

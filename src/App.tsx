@@ -7,7 +7,6 @@ import Groups from "@/routes/Groups";
 import Group from "@/routes/Group";
 import Runs from "@/routes/Runs";
 import Run from "@/routes/Run";
-import Landing from "@/routes/Landing";
 import Leaderboard from "@/routes/Leaderboard";
 
 export default function App() {
@@ -15,9 +14,8 @@ export default function App() {
     <Router>
       <Routes>
         <Route path={`/`} element={<Layout />}>
-          <Route index element={<Landing />} />
+          <Route index element={<Leaderboard />} />
           <Route path="models" element={<Models />} />
-          <Route path="leaderboard" element={<Leaderboard />} />
           <Route path="scenarios" element={<Scenarios />} />
           <Route path="groups" element={<Groups />} />
           <Route path="groups/:groupName" element={<Group />} />
