@@ -205,7 +205,7 @@ export default function Leaderboard() {
               >
                 {allGroupData.map((group, index) => (
                   <option key={index} value={group.title}>
-                    {"Core Leaderboard"}
+                    {"Leaderboard"}
                   </option>
                 ))}
               </select>
