@@ -84,7 +84,7 @@ export default function LeaderboardTables({
   return (
     <>
       {filtered ? (
-        <div className="rounded-lg overflow-hidden shadow-md bg-white p-4 mx-12 my-0">
+        <div className="rounded-lg overflow-hidden border-2 bg-white p-4 mx-12 my-0">
           <div className="overflow-x-auto">
             <table className="table w-full px-4">
               <thead>
