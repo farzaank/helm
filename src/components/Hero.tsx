@@ -4,7 +4,7 @@ import MiniLeaderboard from "./MiniLeaderboard";
 
 export default function Hero() {
   return (
-    <div className="flex px-6 py-14">
+    <div className="flex flex-col md:flex-row px-6 py-14">
       {/* Left side content */}
       <div className="flex-1 p-4 flex flex-col justify-center">
         {" "}
@@ -35,13 +35,14 @@ export default function Hero() {
       </div>
 
       {/* Right side image */}
-      <div className="w-1/3 mx-4">
+      <div className="w-1/3 mx-4 md:mt-6">
         {" "}
         {/* Added mx-4 for horizontal margin */}
         <img
           src={helmHero}
           alt="HELM Hero"
           className="object-cover w-full h-full"
+          style={{ width: "517", height: "490" }}
         />
       </div>
     </div>
