@@ -8,21 +8,23 @@ import Group from "@/routes/Group";
 import Runs from "@/routes/Runs";
 import Run from "@/routes/Run";
 import Leaderboard from "@/routes/Leaderboard";
+import Landing from "@/routes/Landing";
 
 export default function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path={`/`} element={<Layout />}>
-          <Route index element={<Leaderboard />} />
-          <Route path="models" element={<Models />} />
-          <Route path="scenarios" element={<Scenarios />} />
-          <Route path="groups" element={<Groups />} />
-          <Route path="groups/:groupName" element={<Group />} />
-          <Route path="runs" element={<Runs />} />
-          <Route path="runs/:runName" element={<Run />} />
-        </Route>
-      </Routes>
-    </Router>
-  );
+	return (
+		<Router>
+			<Routes>
+				<Route path={`/`} element={<Layout />}>
+					<Route index element={<Landing />} />
+					<Route path="leaderboard" element={<Leaderboard />} />
+					<Route path="models" element={<Models />} />
+					<Route path="scenarios" element={<Scenarios />} />
+					<Route path="groups" element={<Groups />} />
+					<Route path="groups/:groupName" element={<Group />} />
+					<Route path="runs" element={<Runs />} />
+					<Route path="runs/:runName" element={<Run />} />
+				</Route>
+			</Routes>
+		</Router>
+	);
 }
