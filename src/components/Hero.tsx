@@ -16,20 +16,21 @@ export default function Hero() {
             </strong>
           </h1>
         </div>
-        <div className="flex justify-start mt-6 ml-4">
-          <Link to="leaderboard">
-            <button className="px-6 btn btn-grey rounded-md">
-              <body>Leaderboard</body>
-            </button>
-          </Link>
-          <Link to="https://github.com/stanford-crfm/helm" className="ml-4">
-            {" "}
-            {/* Added margin-left for spacing */}
-            <button className="px-6 btn btn-grey rounded-md">Github</button>
-          </Link>
-        </div>
-        <div className="flex justify-start py-4">
-          <MiniLeaderboard></MiniLeaderboard>
+        <div className="flex justify-start py-4 px-20">
+          <div>
+            <MiniLeaderboard></MiniLeaderboard>
+            <div className="flex justify-end mt-6 ml-4">
+              <Link to="leaderboard">
+                <button className="px-6 btn btn-grey rounded-md">
+                  <body>Leaderboard</body>
+                </button>
+              </Link>
+              <Link to="https://github.com/stanford-crfm/helm" className="ml-4">
+                {" "}
+                <button className="px-6 btn btn-grey rounded-md">Github</button>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
