@@ -42,7 +42,7 @@ export default function Hero() {
           src={helmHero}
           alt="HELM Hero"
           className="object-cover w-full h-full"
-          style={{ width: "465", height: "441" }}
+          style={{ width: "418", height: "397" }}
         />
       </div>
     </div>
