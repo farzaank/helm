@@ -35,7 +35,7 @@ export default function Hero() {
       </div>
 
       {/* Right side image */}
-      <div className="w-1/3 mx-4 md:mt-6">
+      <div className="w-1/3 mx-4 md:mt-6 px-4 py-4">
         {" "}
         {/* Added mx-4 for horizontal margin */}
         <img
