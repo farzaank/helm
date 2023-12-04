@@ -22,7 +22,6 @@ import openai from "@/assets/logos/openai.png";
 import together from "@/assets/logos/together.png";
 import tsinghuaKeg from "@/assets/logos/tsinghua-keg.png";
 import yandex from "@/assets/logos/yandex.png";
-import MiniLeaderboard from "@/components/MiniLeaderboard";
 
 const logos = [
 	ai21,
@@ -61,7 +60,6 @@ export default function LegacyLanding() {
 	return (
 		<>
 			<Hero />
-			<MiniLeaderboard />
 
 			<div className="container mb-12 mx-auto text-lg px-16">
 				<div className="flex flex-col sm:flex-row justify-center mt-10 mb-10 flex gap-2 sm:gap-8 md:gap-32">

@@ -95,6 +95,7 @@ export default function MiniLeaderboard() {
 						"gpt-3.5-turbo-0613",
 						"LLaMA (30B)",
 					]}
+					filteredCols={[0, 1, 2, 3]}
 				/>
 			</>
 		</>
