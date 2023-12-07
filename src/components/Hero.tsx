@@ -6,11 +6,11 @@ export default function Hero() {
   return (
     <div className="flex flex-col md:flex-row px-6 py-14">
       {/* Left side content */}
-      <div className="flex-1 p-4 flex flex-col justify-center">
+      <div className="flex-1 w-1/2 p-4 flex flex-col justify-center">
         {" "}
         {/* Added flex and justify-center */}
         <div className="flex justify-start">
-          <h1 className="text-5xl mb-4 mx-4 mt-2">
+          <h1 className="text-4xl mb-4 mx-2 mt-2">
             <strong>
               A holistic framework for evaluating foundation models.
             </strong>
@@ -27,6 +27,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
       {/* Right side image */}
       <div className="w-1/2 mx-4 md:mt-6 px-12 py-6">
         {" "}
