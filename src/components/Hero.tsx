@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div className="flex flex-col md:flex-row px-6 py-14">
       {/* Left side content */}
-      <div className="flex-1 w-1/2 p-4 flex flex-col justify-center">
+      <div className="flex-1 w-1/2 p-2 flex flex-col justify-center">
         {" "}
         {/* Added flex and justify-center */}
         <div className="flex justify-start">
