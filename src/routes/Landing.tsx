@@ -22,6 +22,7 @@ import openai from "@/assets/logos/openai.png";
 import together from "@/assets/logos/together.png";
 import tsinghuaKeg from "@/assets/logos/tsinghua-keg.png";
 import yandex from "@/assets/logos/yandex.png";
+import { Link } from "react-router-dom";
 
 const logos = [
   ai21,
@@ -62,12 +63,26 @@ export default function LegacyLanding() {
       <Hero />
 
       <div className="container mb-12 mx-auto text-lg px-16">
+        <div className="flex flex-col sm:flex-row justify-center mt-24 mb-6 flex gap-2 sm:gap-8 md:gap-32">
+          {" "}
+          <div className="w-1/2 flex justify-center items-center p-4 rounded-lg bg-gray-100">
+            <span className="mr-4">Try out our framework here:</span>
+
+            <Link to="https://github.com/stanford-crfm/helm" className="ml-4">
+              {" "}
+              <button className="px-3 py-0 btn btn-grey rounded-lg border border-gray-500">
+                Github
+              </button>
+            </Link>
+          </div>
+        </div>
         <div className="flex flex-col sm:flex-row justify-center mt-10 mb-10 flex gap-2 sm:gap-8 md:gap-32">
           {" "}
           <h1 className="text-4xl  mx-4 mt-40">
             <strong>Our Partners</strong>
           </h1>
         </div>
+
         <ol className="my-8 flex flex-col gap-32">
           <li>
             <div className="flex flex-wrap justify-center max-w-[1100px] mx-auto w-auto">

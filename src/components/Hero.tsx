@@ -16,34 +16,33 @@ export default function Hero() {
             </strong>
           </h1>
         </div>
+        <div className="flex flex-row justify-center">
+          <div className="flex justify-center ">
+            <img
+              src={helmHero}
+              alt="HELM Hero"
+              className="object-cover w-full h-full"
+              style={{ width: "334px", height: "315px" }}
+            />
+          </div>
+        </div>
+      </div>
+      {/* Right side image */}
+      <div className="w-1/2 mx-4 md:mt-6 px-12 py-6">
+        {" "}
+        {/* Added mx-4 for horizontal margin */}
         <div className="flex justify-start py-4 px-20">
           <div>
             <MiniLeaderboard></MiniLeaderboard>
             <div className="flex justify-end mt-6 ml-4">
               <Link to="leaderboard">
                 <button className="px-6 btn btn-grey rounded-md">
-                  <body>Leaderboard</body>
+                  <body>View Leaderboard</body>
                 </button>
-              </Link>
-              <Link to="https://github.com/stanford-crfm/helm" className="ml-4">
-                {" "}
-                <button className="px-6 btn btn-grey rounded-md">Github</button>
               </Link>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Right side image */}
-      <div className="w-2/5 mx-4 md:mt-6 px-12 py-6">
-        {" "}
-        {/* Added mx-4 for horizontal margin */}
-        <img
-          src={helmHero}
-          alt="HELM Hero"
-          className="object-cover w-full h-full"
-          style={{ width: "418", height: "397" }}
-        />
       </div>
     </div>
   );

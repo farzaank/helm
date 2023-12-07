@@ -90,12 +90,8 @@ export default function MiniLeaderboard() {
             "Mistral v0.1 (7B)",
             "Cohere Command beta (52.4B)",
             "text-davinci-003",
-            "Jurassic-2 Jumbo (178B)",
-            "Llama 2 (13B)",
-            "gpt-3.5-turbo-0613",
-            "LLaMA (30B)",
           ]}
-          filteredCols={[0, 1, 2, 3]}
+          filteredCols={[0, 1]}
         />
       </>
     </>
