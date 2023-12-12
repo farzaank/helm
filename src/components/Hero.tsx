@@ -4,9 +4,9 @@ import MiniLeaderboard from "./MiniLeaderboard";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col px-4 sm:px-6 py-100 sm:py-10">
+    <div className="flex flex-col px-4 sm:px-6 py-100 sm:py-10 sm:mb-96 md:mb-96 lg:mb-0 xl:mb-0 2xl:mb-0">
       {/* Text section */}
-      <div className="flex flex-col text-center mb-10 lg:mb-100 justify-start">
+      <div className="flex flex-col text-center mb-10 justify-start">
         <h1 className="text-3xl sm:text-4xl mb-3 sm:mb-4 mx-2 mt-2">
           <strong>
             A holistic framework for evaluating foundation models.
