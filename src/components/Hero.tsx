@@ -18,7 +18,7 @@ export default function Hero() {
       {/* Container for Image and Leaderboard */}
       <div
         className="flex flex-col md:flex-col lg:flex-row lg:justify-center"
-        style={{ height: "525px", transform: "scale(0.85)" }} // Reduced height by 10%
+        style={{ height: "525px", transform: "scale(0.9)" }} // Reduced height by 10%
       >
         {/* Image section */}
         <div className="w-full lg:w-1/2 flex justify-center mb-4 lg:mb-0 h-full py-10">
