@@ -73,7 +73,7 @@ export default function NavBar() {
           <li>
             <Link to="https://github.com/stanford-crfm/helm">GitHub</Link>
           </li>
-          <li>
+          <li className="hidden lg:flex">
             <ReleaseDropdown />
           </li>
         </ul>

@@ -17,7 +17,7 @@ export default function Hero() {
       {/* Container for Image and Leaderboard */}
       <div
         className="flex flex-col md:flex-col lg:flex-row lg:justify-center  "
-        style={{ height: "525px" }} // Fixed height
+        style={{ height: "545px" }} // Fixed height
       >
         {/* Image section */}
         <div className="w-full lg:w-1/2 flex justify-center mb-4 lg:mb-0 h-full py-10">

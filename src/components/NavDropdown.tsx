@@ -15,7 +15,7 @@ function NavDropdown() {
               className="w-full h-10 object-cover"
             />
 
-            <div className="pl-3"> Classic </div>
+            <div className="hidden lg:flex pl-3"> Classic </div>
           </div>
         </Link>
 
