@@ -4,44 +4,44 @@ import MiniLeaderboard from "./MiniLeaderboard";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col px-6 py-14">
+    <div className="flex flex-col px-4 sm:px-6 py-100 sm:py-10">
       {/* Text section */}
-      <div className="text-center mb-6">
-        <h1 className="text-4xl mb-4 mx-2 mt-2">
+      <div className="flex flex-col text-center mb-10 lg:mb-100 justify-start">
+        <h1 className="text-3xl sm:text-4xl mb-3 sm:mb-4 mx-2 mt-2">
           <strong>
             A holistic framework for evaluating foundation models.
           </strong>
         </h1>
       </div>
 
-      {/* Image section */}
-      <div className="flex flex-row justify-center">
-        {/* Left side content */}
-        <div className="w-full md:w-1/2">
-          <div className="flex justify-center">
-            <div className="flex justify-center">
-              <img
-                src={helmHero}
-                alt="HELM Hero"
-                className="object-cover w-full h-full"
-                style={{ width: "480px", height: "456px" }}
-              />
-            </div>
-          </div>
+      {/* Container for Image and Leaderboard */}
+      <div
+        className="flex flex-col md:flex-col lg:flex-row lg:justify-center  "
+        style={{ height: "525px" }} // Fixed height
+      >
+        {/* Image section */}
+        <div className="w-full lg:w-1/2 flex justify-center mb-4 lg:mb-0 h-full py-10">
+          <img
+            src={helmHero}
+            alt="HELM Hero"
+            className="object-cover h-full" // Stretched to full height
+            style={{ maxWidth: "100%" }}
+          />
         </div>
 
-        {/* Right side content */}
-        <div className="w-full md:w-1/2">
-          <div className="flex justify-center">
-            <div className="py-2 rounded-3xl bg-gray-100">
-              <MiniLeaderboard></MiniLeaderboard>
-              <div className="flex justify-end mt-2 ">
-                <Link to="leaderboard">
-                  <button className="px-4 mx-3 my-1 btn bg-white rounded-md">
-                    <body>See More</body>
-                  </button>
-                </Link>
-              </div>
+        {/* Leaderboard section */}
+        <div className="w-full lg:w-1/2 flex justify-center h-full py-10">
+          <div
+            className="py-2 rounded-3xl bg-gray-100 h-full" // Stretched to full height
+            style={{ maxWidth: "100%" }}
+          >
+            <MiniLeaderboard></MiniLeaderboard>
+            <div className="flex justify-end mt-2">
+              <Link to="leaderboard">
+                <button className="px-4 mx-3 my-1 btn bg-white rounded-md">
+                  <span>See More</span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
