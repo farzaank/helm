@@ -33,10 +33,12 @@ export default function Runs() {
 
     void fetchData();
     return () => controller.abort();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchQuery]);
 
   useEffect(() => {
     filterRunSpecs(searchQuery, runSpecs);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [runSpecs, searchQuery]);
 
   function filterRunSpecs(query: string, runSpecs: RunSpec[]) {
