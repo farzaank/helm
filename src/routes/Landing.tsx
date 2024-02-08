@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import getSchema from "@/services/getSchema";
 import type Schema from "@/types/Schema";
 import ModelsList from "@/components/ModelsList";
-import MetricsList from "@/components/MetricsList";
 import ScenariosList from "@/components/ScenariosList";
 import Hero from "@/components/Hero";
 
@@ -10,6 +9,7 @@ import Hero from "@/components/Hero";
 //import scenariosByMetrics from "@/assets/scenarios-by-metrics.png";
 //import taxonomyScenarios from "@/assets/taxonomy-scenarios.png";
 import ai21 from "@/assets/logos/ai21.png";
+import alephAlpha from "@/assets/logos/aleph-alpha.png";
 import anthropic from "@/assets/logos/anthropic.png";
 import bigscience from "@/assets/logos/bigscience.png";
 import cohere from "@/assets/logos/cohere.png";
@@ -17,14 +17,19 @@ import eleutherai from "@/assets/logos/eleutherai.png";
 import google from "@/assets/logos/google.png";
 import meta from "@/assets/logos/meta.png";
 import microsoft from "@/assets/logos/microsoft.png";
+import mistral from "@/assets/logos/mistral.png";
 import nvidia from "@/assets/logos/nvidia.png";
 import openai from "@/assets/logos/openai.png";
+import tii from "@/assets/logos/tii.png";
 import together from "@/assets/logos/together.png";
 import tsinghuaKeg from "@/assets/logos/tsinghua-keg.png";
+import writer from "@/assets/logos/writer.png";
 import yandex from "@/assets/logos/yandex.png";
+import zeroOne from "@/assets/logos/01.png";
 
 const logos = [
   ai21,
+  alephAlpha,
   anthropic,
   bigscience,
   cohere,
@@ -32,11 +37,15 @@ const logos = [
   google,
   meta,
   microsoft,
+  mistral,
   nvidia,
   openai,
+  tii,
   together,
   tsinghuaKeg,
+  writer,
   yandex,
+  zeroOne,
 ];
 
 export default function LegacyLanding() {
@@ -87,13 +96,9 @@ export default function LegacyLanding() {
           </ol>
         </div>
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <ModelsList models={schema.models} />
             <ScenariosList runGroups={schema.run_groups} />
-            <MetricsList
-              metrics={schema.metrics}
-              metricGroups={schema.metric_groups}
-            />
           </div>
         </div>
       </div>

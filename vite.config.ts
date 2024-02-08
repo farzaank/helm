@@ -16,6 +16,16 @@ export default defineConfig({
   },
   build: {
     outDir: `./static_build`,
+    rollupOptions: {
+      output: {
+        // Manually chunk large libraries to keep chunk size under 500 KB
+        manualChunks: {
+          react: ["react", "react-dom", "react-markdown", "react-router-dom", "react-spinners"],
+          tremor: ["@tremor/react"],
+          recharts: ["recharts"],
+        }
+      }
+    }
   },
-  base: "/helm/" // removing for new build method can't add process.env.HELM_SUITE here with GH pages 
+  base: "/helm/"
 });

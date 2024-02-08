@@ -7,7 +7,7 @@ This app makes use of [React](https://react.dev/) + [TypeScript](https://www.typ
 ### Installation
 
 ```bash
-npm Install
+yarn install
 ```
 
 ### Develop
@@ -15,7 +15,7 @@ npm Install
 This will open a development server
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 You will also want to start `helm-server` locally as well. In the `src/helm` directory run the following
@@ -27,23 +27,25 @@ helm-server
 ### Testing
 
 ```
-npm run test
+yarn test
 ```
 
 ### Build
 
 ```bash
-npm run build
+yarn build
 ```
 
 ### Deployment
 
 For deployment, you can use the build directory out of the box (using the previous command), but will have to replace every leading / in href and src in order for deploys to GitHub Pages to work correctly.
 
+You can rename the build directory to the desired release name and upload it to GitHub pages to add a new front-end release. Currently the GitHub workflow for deploying the React front-end does not do this and is not being used.
+
 ### Linting
 
 ```bash
-npm run lint
+yarn lint
 ```
 
 ### Formatting
@@ -51,27 +53,5 @@ npm run lint
 If you don't have prettier configured in your IDE or Node environment, you will have to run the following before commiting, in order to pass tests.
 
 ```bash
-npm run format
+yarn format
 ```
-
-### Environment Variables
-
-Requires the following environment variables for development and deployment. In development these can be placed in a `.env.local` file with the following:
-
-```
-# The default location of local `helm-server`
-VITE_HELM_BENCHMARKS_ENDPOINT="http://localhost:8000/"
-# The suites available based on local runs
-VITE_HELM_BENCHMARKS_SUITE="v1"
-```
-
-This can instead be pointed to the public HELM data to avoid needing to run `helm-server` locally.
-
-```
-# Example
-VITE_HELM_BENCHMARKS_ENDPOINT="https://storage.googleapis.com/crfm-helm-public/"
-# Change to current version
-VITE_HELM_BENCHMARKS_SUITE="v0.2.3"
-```
-
-# helm-fork
