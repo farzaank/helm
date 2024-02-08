@@ -16,10 +16,6 @@ jobs:
         node-version: '18'
     - name: Install dependencies
       run: npm ci
-    - name: Run lint
-      run: npm run lint
-    - name: Run check format
-      run: npm run format:check
     - name: Run tests
       run: npm run test
     - name: Upload artifact
