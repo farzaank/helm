@@ -4,6 +4,7 @@ import type DisplayRequest from "@/types/DisplayRequest";
 import Indicator from "@/components/Indicator";
 import Request from "@/components/Request";
 import Preview from "@/components/Preview";
+import { List, ListItem } from "@tremor/react";
 
 type Props = {
   predictions: DisplayPrediction[];
@@ -39,7 +40,7 @@ export default function Predictions({ predictions, requests }: Props) {
               {prediction.mapped_output ? (
                 <>
                   <h3>Prediction mapped output</h3>
-                  <Preview value={prediction.mapped_output} />
+                  <Preview value={String(prediction.mapped_output)} />
                 </>
               ) : null}
             </div>
@@ -59,14 +60,20 @@ export default function Predictions({ predictions, requests }: Props) {
                     <div className="overflow-auto">
                       <Request request={requests[idx]} />
                     </div>
-                    <ul>
+                    <List>
                       {Object.keys(prediction.stats).map((statKey, idx) => (
-                        <li key={idx} className="mt-2">
+                        <ListItem key={idx} className="mt-2">
                           <span>{statKey}:</span>
-                          <span>{prediction.stats[statKey]}</span>
-                        </li>
+                          <span>
+                            {String(
+                              prediction.stats[
+                                statKey as keyof typeof prediction.stats
+                              ],
+                            )}
+                          </span>
+                        </ListItem>
                       ))}
-                    </ul>
+                    </List>
                   </div>
                 </div>
               )}
