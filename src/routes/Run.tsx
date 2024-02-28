@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 import { Badge, Card, List, ListItem } from "@tremor/react";
-import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
+import { ArrowDownTrayIcon, LinkIcon } from "@heroicons/react/24/solid";
 import getSchema from "@/services/getSchema";
 import getRunSpecs from "@/services/getRunSpecs";
 import type RunSpec from "@/types/RunSpec";
@@ -15,6 +15,8 @@ import getDisplayPredictionsByName from "@/services/getDisplayPredictionsByName"
 import type DisplayPredictionsMap from "@/types/DisplayPredictionsMap";
 import getScenarioByName from "@/services/getScenarioByName";
 import type Scenario from "@/types/Scenario";
+import type AdapterFieldMap from "@/types/AdapterFieldMap";
+import type MetricFieldMap from "@/types/MetricFieldMap";
 import { getRunSpecByNameUrl } from "@/services/getRunSpecByName";
 import { getScenarioStateByNameUrl } from "@/services/getScenarioStateByName";
 import Tab from "@/components/Tab";
@@ -51,6 +53,8 @@ export default function Run() {
   const [totalMetricsPages, setTotalMetricsPages] = useState<number>(1);
   const [model, setModel] = useState<Model | undefined>();
   const [scenario, setScenario] = useState<Scenario | undefined>();
+  const [adapterFieldMap, setAdapterFieldMap] = useState<AdapterFieldMap>({});
+  const [metricFieldMap, setMetricFieldMap] = useState<MetricFieldMap>({});
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
@@ -121,6 +125,20 @@ export default function Run() {
         }, {} as DisplayRequestsMap),
       );
       const schema = await getSchema(signal);
+
+      setMetricFieldMap(
+        schema.metrics.reduce((acc, cur) => {
+          acc[cur.name] = cur;
+          return acc;
+        }, {} as MetricFieldMap),
+      );
+      setAdapterFieldMap(
+        schema.adapter.reduce((acc, cur) => {
+          acc[cur.name] = cur;
+          return acc;
+        }, {} as AdapterFieldMap),
+      );
+
       setModel(
         schema.models.find(
           (m) =>
@@ -158,7 +176,12 @@ export default function Run() {
     <>
       <div className="flex justify-between gap-8 mb-12">
         <div>
-          <h1 className="text-3xl">{scenario.name}</h1>
+          <h1 className="text-3xl flex items-center">
+            {scenario.name}
+            <a href={"/#/groups/" + scenario.name}>
+              <LinkIcon className="w-6 h-6 ml-2" />
+            </a>
+          </h1>
           <h3 className="text-xl">
             <MarkdownValue value={scenario.description} />
           </h3>
@@ -202,7 +225,14 @@ export default function Run() {
           <List className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8">
             {Object.entries(runSpec.adapter_spec).map(([key, value], idx) => (
               <ListItem className={idx < 3 ? "!border-0" : ""}>
-                <strong className="mr-1">{`${key}: `}</strong>
+                <strong
+                  className="mr-1"
+                  title={
+                    adapterFieldMap[key]
+                      ? adapterFieldMap[key].description
+                      : undefined
+                  }
+                >{`${key}: `}</strong>
                 <span className="overflow-x-auto">{value}</span>
               </ListItem>
             ))}
@@ -236,6 +266,7 @@ export default function Run() {
                 instance={instance}
                 requests={displayRequestsMap[instance.id]}
                 predictions={displayPredictionsMap[instance.id]}
+                metricFieldMap={metricFieldMap}
               />
             ))}
           </div>
@@ -295,13 +326,10 @@ export default function Run() {
                         if (key === "name") {
                           return (
                             <td key={key}>
-                              <StatNameDisplay stat={stat} />
-                              <div className="text-sm text-gray-500">
-                                {
-                                  /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access */
-                                  value.name
-                                }
-                              </div>
+                              <StatNameDisplay
+                                stat={stat}
+                                metricFieldMap={metricFieldMap}
+                              />
                             </td>
                           );
                         }
