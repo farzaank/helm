@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import getSchema from "@/services/getSchema";
 import type Schema from "@/types/Schema";
-import ModelsList from "@/components/ModelsList";
-import ScenariosList from "@/components/ScenariosList";
 import CardGrid from "@/components/CardGrid";
 import SimpleHero from "@/components/SimpleHero";
 
@@ -29,89 +27,89 @@ import yandex from "@/assets/logos/yandex.png";
 import zeroOne from "@/assets/logos/01.png";
 
 const logos = [
-  ai21,
-  alephAlpha,
-  anthropic,
-  bigscience,
-  cohere,
-  eleutherai,
-  google,
-  meta,
-  microsoft,
-  mistral,
-  nvidia,
-  openai,
-  tii,
-  together,
-  tsinghuaKeg,
-  writer,
-  yandex,
-  zeroOne,
+	ai21,
+	alephAlpha,
+	anthropic,
+	bigscience,
+	cohere,
+	eleutherai,
+	google,
+	meta,
+	microsoft,
+	mistral,
+	nvidia,
+	openai,
+	tii,
+	together,
+	tsinghuaKeg,
+	writer,
+	yandex,
+	zeroOne,
 ];
 
 export default function LegacyLanding() {
-  const [schema, setSchema] = useState<Schema | undefined>(undefined);
+	const [schema, setSchema] = useState<Schema | undefined>(undefined);
 
-  useEffect(() => {
-    const controller = new AbortController();
-    async function fetchData() {
-      const schema = await getSchema(controller.signal);
-      setSchema(schema);
-    }
+	useEffect(() => {
+		const controller = new AbortController();
+		async function fetchData() {
+			const schema = await getSchema(controller.signal);
+			setSchema(schema);
+		}
 
-    void fetchData();
-    return () => controller.abort();
-  }, []);
+		void fetchData();
+		return () => controller.abort();
+	}, []);
 
-  if (!schema) {
-    return null;
-  }
+	if (!schema) {
+		return null;
+	}
 
-  return (
-    <>
-      <SimpleHero />
-      <div className="container mt-40 mx-auto text-lg">
-        <div className="flex flex-col sm:flex-row justify-center mb-10 flex sm:gap-8 md:gap-32">
-          <h1 className="text-4xl  mx-4 ">
-            <strong>HELM Projects</strong>
-          </h1>
-        </div>
-        <div className="flex flex-col sm:flex-row flex sm:gap-8 md:gap-32">
-          <text>
-            HELM projects involve utilizing the HELM framework on specific
-            scenarios and models to evaluate language models on specified
-            subject matters.
-          </text>
-        </div>
-      </div>
-      <CardGrid />
-      <div className="mx-auto text-lg px-16">
-        <div className="container mb-12 mx-auto text-lg px-16">
-          <div className="flex flex-col sm:flex-row justify-center mt-10 mb-10 flex gap-2 sm:gap-8 md:gap-32">
-            {" "}
-            <h1 className="text-4xl  mx-4 mt-40">
-              <strong>Our Partners</strong>
-            </h1>
-          </div>
+	return (
+		<>
+			<SimpleHero />
+			<div className="container mt-40 mx-auto text-lg">
+				<div className="flex flex-col sm:flex-row justify-center mb-10 flex sm:gap-8 md:gap-32">
+					<h1 className="text-4xl  mx-4 ">
+						<strong>HELM Projects</strong>
+					</h1>
+				</div>
+				<div className="flex flex-col sm:flex-row flex sm:gap-8 md:gap-32">
+					<text>
+						HELM projects involve utilizing the HELM framework on specific
+						scenarios and models to evaluate language models on specified
+						subject matters.
+					</text>
+				</div>
+			</div>
+			<CardGrid />
+			<div className="mx-auto text-lg px-16">
+				<div className="container mb-12 mx-auto text-lg px-16">
+					<div className="flex flex-col sm:flex-row justify-center mt-10 mb-10 flex gap-2 sm:gap-8 md:gap-32">
+						{" "}
+						<h1 className="text-4xl  mx-4 mt-40">
+							<strong>Our Partners</strong>
+						</h1>
+					</div>
 
-          <ol className="my-8 flex flex-col gap-32">
-            <li>
-              <div className="flex flex-wrap justify-center max-w-[1100px] mx-auto w-auto">
-                {logos.map((logo, idx) => (
-                  <div className="w-24 h-24 flex items-center m-6" key={idx}>
-                    <img
-                      src={logo}
-                      alt="Logo"
-                      className="mx-auto block"
-                      sizes="100vw"
-                    />
-                  </div>
-                ))}
-              </div>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </>
-  );
+					<ol className="my-8 flex flex-col gap-32">
+						<li>
+							<div className="flex flex-wrap justify-center max-w-[1100px] mx-auto w-auto">
+								{logos.map((logo, idx) => (
+									<div className="w-24 h-24 flex items-center m-6" key={idx}>
+										<img
+											src={logo}
+											alt="Logo"
+											className="mx-auto block"
+											sizes="100vw"
+										/>
+									</div>
+								))}
+							</div>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</>
+	);
 }
