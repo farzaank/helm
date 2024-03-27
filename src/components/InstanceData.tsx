@@ -5,6 +5,7 @@ import Predictions from "@/components/Predictions";
 import References from "@/components/References";
 import type MetricFieldMap from "@/types/MetricFieldMap";
 import Preview from "@/components/Preview";
+import MultimediaObjectDisplay from "./MultimediaObjectDisplay";
 
 interface Props {
   instance: Instance;
@@ -25,17 +26,30 @@ export default function InstanceData({
         {`Instance id: ${instance.id} [split:  ${instance.split}]`}
       </h3>
       <h3>Input</h3>
-      <Preview value={instance.input.text} />
-      {instance.references && instance.references.length > 0 ? (
-        <References references={instance.references} />
-      ) : null}
-      {predictions && requests ? (
-        <Predictions
-          predictions={predictions}
-          requests={requests}
-          metricFieldMap={metricFieldMap}
+      {instance.input.multimedia_content !== undefined ? (
+        <MultimediaObjectDisplay
+          multimediaObject={instance.input.multimedia_content}
         />
-      ) : null}
+      ) : instance.input.text.includes(`<br><img src="data:image;base64`) ? (
+        <div dangerouslySetInnerHTML={{ __html: instance.input.text }} />
+      ) : (
+        <Preview value={instance.input.text} />
+      )}
+
+      <div>
+        {instance.references && instance.references.length > 0 ? (
+          <References references={instance.references} />
+        ) : null}
+      </div>
+      <div>
+        {predictions && requests ? (
+          <Predictions
+            predictions={predictions}
+            requests={requests}
+            metricFieldMap={metricFieldMap}
+          />
+        ) : null}
+      </div>
     </div>
   );
 }
