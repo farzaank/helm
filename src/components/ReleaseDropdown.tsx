@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import getReleaseSummary from "@/services/getReleaseSummary";
 import ReleaseSummary from "@/types/ReleaseSummary";
 import ProjectMetadata from "@/types/ProjectMetadata";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import getReleaseUrl from "@/utils/getReleaseUrl";
-
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
 function ReleaseDropdown() {
   const [summary, setSummary] = useState<ReleaseSummary>({
     release: undefined,

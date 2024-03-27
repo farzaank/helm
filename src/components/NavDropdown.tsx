@@ -16,7 +16,15 @@ function NavDropdown() {
       .then((response) => response.json())
       .then((data: ProjectMetadata[]) => {
         setProjectMetadata(data);
+        setCurrProjectMetadata({
+          id: "global",
+          title: "All Projects",
+          description: "description",
+          releases: "releases",
+          imageUrl: "imageUrl",
+        });
         // set currProjectMetadata to val where projectMetadataEntry.id matches window.PROJECT_ID
+        /*
         if (window.PROJECT_ID) {
           const currentEntry = data.find(
             (entry) => entry.id === window.PROJECT_ID,
@@ -27,6 +35,7 @@ function NavDropdown() {
           const currentEntry = data.find((entry) => entry.id === "lite");
           setCurrProjectMetadata(currentEntry);
         }
+        */
       })
       .catch((error) => {
         console.error("Error fetching JSON:", error);
