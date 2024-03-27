@@ -20,7 +20,7 @@ function NavDropdown() {
           id: "global",
           title: "All Projects",
           description: "description",
-          releases: "releases",
+          releases: ["releases"],
           imageUrl: "imageUrl",
         });
         // set currProjectMetadata to val where projectMetadataEntry.id matches window.PROJECT_ID

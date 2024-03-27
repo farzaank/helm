@@ -95,7 +95,11 @@ function ReleaseDropdown() {
         {releases.map((release) => (
           <li>
             <a
-              href={getReleaseUrl(release, currProjectMetadata)}
+              href={
+                currProjectMetadata && currProjectMetadata.id
+                  ? getReleaseUrl(release, currProjectMetadata.id)
+                  : getReleaseUrl(release, "lite")
+              }
               className="block"
               role="menuitem"
             >
