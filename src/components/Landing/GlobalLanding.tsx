@@ -70,11 +70,18 @@ export default function LegacyLanding() {
   return (
     <>
       <SimpleHero />
-      <div className="container mt-40 mx-auto text-lg px-16">
+      <div className="container mt-40 mx-auto text-lg">
         <div className="flex flex-col sm:flex-row justify-center mb-10 flex sm:gap-8 md:gap-32">
           <h1 className="text-4xl  mx-4 ">
             <strong>HELM Projects</strong>
           </h1>
+        </div>
+        <div className="flex flex-col sm:flex-row flex sm:gap-8 md:gap-32">
+          <text>
+            HELM projects involve utilizing the HELM framework on specific
+            scenarios and models to evaluate language models on specified
+            subject matters.
+          </text>
         </div>
       </div>
       <CardGrid />
