@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import getReleaseSummary from "@/services/getReleaseSummary";
 import ReleaseSummary from "@/types/ReleaseSummary";
 import ProjectMetadata from "@/types/ProjectMetadata";
-import getReleaseUrl from "@/utils/getReleaseUrl";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import getReleaseUrl from "@/utils/getReleaseUrl";
+
 function ReleaseDropdown() {
   const [summary, setSummary] = useState<ReleaseSummary>({
     release: undefined,
@@ -95,11 +96,10 @@ function ReleaseDropdown() {
         {releases.map((release) => (
           <li>
             <a
-              href={
-                currProjectMetadata && currProjectMetadata.id
-                  ? getReleaseUrl(release, currProjectMetadata.id)
-                  : getReleaseUrl(release, "lite")
-              }
+              href={getReleaseUrl(
+                release,
+                currProjectMetadata ? currProjectMetadata.id : "lite",
+              )}
               className="block"
               role="menuitem"
             >

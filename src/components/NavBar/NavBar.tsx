@@ -3,6 +3,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 import crfmLogo from "@/assets/crfm-logo.png";
 import helmLogo from "@/assets/helm-logo-simple.png";
 import NavDropdown from "@/components/NavDropdown";
+import ReleaseDropdown from "../ReleaseDropdown";
 
 export default function NavBar() {
   return (
@@ -15,6 +16,28 @@ export default function NavBar() {
           >
             <Bars3Icon className="w-16 h-16" />
           </label>
+          <ul
+            tabIndex={0}
+            className="menu menu-lg dropdown-content mt-3 z-[1] p-2 bg-base-100 shadow"
+          >
+            <li>
+              <Link to="leaderboard">Leaderboard</Link>
+            </li>
+            <li>
+              <Link to="models">Models</Link>
+            </li>
+            <li>
+              <Link to="scenarios">Scenarios</Link>
+            </li>
+            <li>
+              <Link to="runs" className="whitespace-nowrap">
+                Predictions
+              </Link>
+            </li>
+            <li>
+              <Link to="https://github.com/stanford-crfm/helm">GitHub</Link>
+            </li>
+          </ul>
         </div>
       </div>
       <div className="flex-1 items-center">
@@ -26,7 +49,28 @@ export default function NavBar() {
         </Link>
         <NavDropdown></NavDropdown>
       </div>
-      <div className="flex-none hidden md:block"></div>
+      <div className="flex-none hidden md:block">
+        <ul className="flex flex-row gap-6 px-1">
+          <li>
+            <Link to="leaderboard">Leaderboard</Link>
+          </li>
+          <li>
+            <Link to="models">Models</Link>
+          </li>
+          <li>
+            <Link to="scenarios">Scenarios</Link>
+          </li>
+          <li>
+            <Link to="runs">Predictions</Link>
+          </li>
+          <li>
+            <Link to="https://github.com/stanford-crfm/helm">GitHub</Link>
+          </li>
+          <li className="hidden lg:flex">
+            <ReleaseDropdown />
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }
