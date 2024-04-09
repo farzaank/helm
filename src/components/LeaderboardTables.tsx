@@ -46,6 +46,8 @@ export default function LeaderboardTables({
   const getHeaderValue = (headerValueObject: HeaderValueObject): string => {
     if (headerValueObject.value === "Model/adapter") {
       return "Model";
+    } else if (headerValueObject.value.includes("-book")) {
+      return headerValueObject.value.replace("-book", "");
     } else {
       return headerValueObject.value;
     }
