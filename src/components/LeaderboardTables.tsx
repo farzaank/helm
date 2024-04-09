@@ -206,7 +206,7 @@ export default function LeaderboardTables({
                         key={`${activeGroup}-${idx}`}
                         className={`${
                           idx === activeSortColumn ? "bg-gray-100" : ""
-                        } whitespace-nowrap px-4`}
+                        } whitespace-nowrap px-4 `}
                         title={
                           headerValue.description ? headerValue.description : ""
                         }
@@ -247,10 +247,21 @@ export default function LeaderboardTables({
                             key={`${activeGroup}-${cellIdx}`}
                             className={`${cellIdx === 0 ? "text-lg" : ""}`}
                           >
-                            <RowValue
-                              ignoreHref={ignoreHref && cellIdx === 0}
-                              value={rowValue}
-                            />
+                            <div
+                              className={
+                                rowValue &&
+                                rowValue.style &&
+                                rowValue.style["font-weight"] &&
+                                rowValue.style["font-weight"] === "bold"
+                                  ? "font-bold"
+                                  : ""
+                              }
+                            >
+                              <RowValue
+                                ignoreHref={ignoreHref && cellIdx === 0}
+                                value={rowValue}
+                              />
+                            </div>
                           </td>
                         ))}
                     </tr>
@@ -262,7 +273,10 @@ export default function LeaderboardTables({
       ) : (
         <div>
           <div>
-            <table className="rounded-lg shadow-md table">
+            <table
+              className="rounded-lg shadow-md table"
+              style={{ width: "200px" }}
+            >
               <thead>
                 <tr>
                   {activeGroupsTable.header.map((headerValue, idx) => (
@@ -277,7 +291,7 @@ export default function LeaderboardTables({
                         headerValue.description ? headerValue.description : ""
                       }
                     >
-                      <div className="flex gap-2 items-center">
+                      <div className="flex gap-2 items-center min-w-48 w-48 max-w-48 text-wrap">
                         <span>{getHeaderValue(headerValue)}</span>
                         {sortable ? (
                           <button
@@ -303,32 +317,54 @@ export default function LeaderboardTables({
                         } ${idx % 2 === 0 ? "bg-gray-50" : "bg-white"}`}
                       >
                         {cellIdx == 1 ? (
-                          <RowValue
-                            value={{
-                              ...rowValue,
-                              href:
-                                "/runs/?q=" +
-                                getModelForRunName(String(row[0].value)),
-                            }}
-                            title={`Click value to see all predictions for: ${getModelForRunName(
-                              String(row[0].value),
-                            )}`}
-                          />
-                        ) : (
-                          <RowValue
-                            value={{ ...rowValue }}
-                            title={
-                              String(row[0].value) === rowValue.value
-                                ? getModelDesc(String(row[0].value))
-                                : `Click value to see predictions for ${getGroupForRunName(
-                                    getHeaderValue(
-                                      activeGroupsTable.header[cellIdx],
-                                    ),
-                                  )}: ${getModelForRunName(
-                                    String(row[0].value),
-                                  )}`
+                          <div
+                            className={
+                              rowValue &&
+                              rowValue.style &&
+                              rowValue.style["font-weight"] &&
+                              rowValue.style["font-weight"] === "bold"
+                                ? "font-bold"
+                                : ""
                             }
-                          />
+                          >
+                            <RowValue
+                              value={{
+                                ...rowValue,
+                                href:
+                                  "/runs/?q=" +
+                                  getModelForRunName(String(row[0].value)),
+                              }}
+                              title={`Click value to see all predictions for: ${getModelForRunName(
+                                String(row[0].value),
+                              )}`}
+                            />
+                          </div>
+                        ) : (
+                          <div
+                            className={
+                              rowValue &&
+                              rowValue.style &&
+                              rowValue.style["font-weight"] &&
+                              rowValue.style["font-weight"] === "bold"
+                                ? "font-bold"
+                                : ""
+                            }
+                          >
+                            <RowValue
+                              value={{ ...rowValue }}
+                              title={
+                                String(row[0].value) === rowValue.value
+                                  ? getModelDesc(String(row[0].value))
+                                  : `Click value to see predictions for ${getGroupForRunName(
+                                      getHeaderValue(
+                                        activeGroupsTable.header[cellIdx],
+                                      ),
+                                    )}: ${getModelForRunName(
+                                      String(row[0].value),
+                                    )}`
+                              }
+                            />
+                          </div>
                         )}
                       </td>
                     ))}

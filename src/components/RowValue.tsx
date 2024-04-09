@@ -41,7 +41,15 @@ export default function RowValue({ value, title }: Props) {
     if (href) {
       return (
         <Link to={href} inTable title={title}>
-          {formatNumber(value.value)}
+          <div className="flex items-center">
+            {formatNumber(value.value)}
+            <img
+              className="ml-0"
+              width="20px"
+              height="20px"
+              src="https://static.vecteezy.com/system/resources/previews/019/787/073/non_2x/link-flat-on-transparent-background-free-png.png"
+            />
+          </div>
         </Link>
       );
     } else {
