@@ -191,7 +191,7 @@ export default function LeaderboardTables({
       {filtered ? (
         <div
           className="rounded-2xl overflow-hidden border-2 bg-white p-1 mx-2 my-0"
-          style={{ overflow: "auto" }}
+          style={{ overflow: "auto", justifyContent: "space-between" }}
         >
           <div className="overflow-x-auto">
             <table className="table w-full">
@@ -208,6 +208,10 @@ export default function LeaderboardTables({
                         key={`${activeGroup}-${idx}`}
                         className={`${
                           idx === activeSortColumn ? "bg-gray-100" : ""
+                        } ${
+                          headerValue.description
+                            ? "underline decoration-dashed"
+                            : ""
                         } whitespace-nowrap px-4 `}
                         title={
                           headerValue.description ? headerValue.description : ""
@@ -286,14 +290,16 @@ export default function LeaderboardTables({
                       key={`${activeGroup}-${idx}`}
                       className={`${
                         idx === activeSortColumn ? "bg-gray-100" : "bg-white"
-                      } ${
-                        idx === 0 ? "left-0 z-10" : ""
-                      } whitespace-nowrap px-4 sticky top-0`}
+                      } ${idx === 0 ? "left-0 z-10" : ""} ${
+                        headerValue.description
+                          ? "underline decoration-dashed decoration-gray-300	"
+                          : ""
+                      }  whitespace-nowrap px-4 sticky top-0`}
                       title={
                         headerValue.description ? headerValue.description : ""
                       }
                     >
-                      <div className="flex gap-2 items-center min-w-48 w-48 max-w-48 text-wrap">
+                      <div className="flex justify-between items-center min-w-48 w-48 max-w-48 text-wrap">
                         <span>{getHeaderValue(headerValue)}</span>
                         {sortable ? (
                           <button
@@ -320,14 +326,14 @@ export default function LeaderboardTables({
                       >
                         {cellIdx == 1 ? (
                           <div
-                            className={
+                            className={`${
                               rowValue &&
                               rowValue.style &&
                               rowValue.style["font-weight"] &&
                               rowValue.style["font-weight"] === "bold"
                                 ? "font-bold"
                                 : ""
-                            }
+                            }`}
                           >
                             <RowValue
                               value={{
@@ -343,14 +349,18 @@ export default function LeaderboardTables({
                           </div>
                         ) : (
                           <div
-                            className={
+                            className={`${
                               rowValue &&
                               rowValue.style &&
                               rowValue.style["font-weight"] &&
                               rowValue.style["font-weight"] === "bold"
                                 ? "font-bold"
                                 : ""
-                            }
+                            } ${
+                              cellIdx === 0
+                                ? "underline decoration-dashed decoration-gray-300"
+                                : ""
+                            }`}
                           >
                             <RowValue
                               value={{ ...rowValue }}
