@@ -43,13 +43,21 @@ export default function LeaderboardTables({
     value: string;
   }
 
+  function truncateString(value: string): string {
+    if (value.length > 30) {
+      return value.substring(0, 27) + "...";
+    }
+    return value;
+  }
+
+  // TODO remove truncation once a visually suitable version of wrapping is determined
   const getHeaderValue = (headerValueObject: HeaderValueObject): string => {
     if (headerValueObject.value === "Model/adapter") {
       return "Model";
     } else if (headerValueObject.value.includes("-book")) {
-      return headerValueObject.value.replace("-book", "");
+      return truncateString(headerValueObject.value.replace("-book", ""));
     } else {
-      return headerValueObject.value;
+      return truncateString(headerValueObject.value);
     }
   };
 
@@ -300,7 +308,10 @@ export default function LeaderboardTables({
                       }
                     >
                       <div className="flex justify-between items-center min-w-48 w-48 max-w-48 text-wrap">
-                        <span>{getHeaderValue(headerValue)}</span>
+                        <span className={`inline-block w-full break-words`}>
+                          {getHeaderValue(headerValue)}
+                        </span>
+
                         {sortable ? (
                           <button
                             className="link"
