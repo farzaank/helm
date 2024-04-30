@@ -21,6 +21,13 @@
 		"title": "Instruct",
 		"description": "Evaluations of instruction following models with absolute ratings",
 		"id": "instruct",
+		"imageUrl": "https://raw.githubusercontent.com/ELITR/elitr-projects/main/instruct/instruct.png",
+		"releases": ["v1.0.0"]
+	},
+	{
+		"title": "All Projects",
+		"description": "Home page for all projects",
+		"id": "home",
 		"releases": ["v1.0.0"]
 	}
 ]
