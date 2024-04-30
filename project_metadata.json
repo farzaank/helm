@@ -15,13 +15,13 @@
 		"title": "HEIM",
 		"description": "Holistic evaluation of text-to-image models",
 		"id": "heim",
-		"releases": ["v1.1.0", "v1.0.0"]
+		"releases": ["v1.1.0", "v1.0.0"],
+		"imageUrl": "https://raw.githubusercontent.com/stanford-crfm/helm/main/helm-frontend/src/assets/heim-logo.png"
 	},
 	{
 		"title": "Instruct",
 		"description": "Evaluations of instruction following models with absolute ratings",
 		"id": "instruct",
-		"imageUrl": "https://raw.githubusercontent.com/ELITR/elitr-projects/main/instruct/instruct.png",
 		"releases": ["v1.0.0"]
 	},
 	{
