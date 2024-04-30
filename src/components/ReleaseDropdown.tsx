@@ -18,7 +18,9 @@ function ReleaseDropdown() {
   >();
 
   useEffect(() => {
-    fetch("project_metadata.json")
+    fetch(
+      "https://raw.githubusercontent.com/farzaank/helm/main/project_metadata.json",
+    )
       .then((response) => response.json())
       .then((data: ProjectMetadata[]) => {
         // set currProjectMetadata to val where projectMetadataEntry.id matches window.PROJECT_ID
