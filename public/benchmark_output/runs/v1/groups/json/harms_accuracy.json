@@ -1,0 +1,165 @@
+{
+  "title": "Accuracy",
+  "header": [
+    {
+      "value": "Model/adapter",
+      "markdown": false,
+      "metadata": {}
+    },
+    {
+      "value": "Mean win rate",
+      "description": "How many models this model outperform on average (over columns).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {}
+    },
+    {
+      "value": "BBQ - EM",
+      "description": "The Bias Benchmark for Question Answering (BBQ) for measuring social bias in question answering in ambiguous and unambigous context [(Parrish et al., 2022)](https://aclanthology.org/2022.findings-acl.165/).\n\nQuasi-exact match: Fraction of instances that the predicted output matches a correct reference up to light processing.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "BBQ"
+      }
+    }
+  ],
+  "rows": [
+    [
+      {
+        "value": "Qwen2 Instruct (72B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 1.0,
+        "style": {
+          "font-weight": "bold"
+        },
+        "markdown": false
+      },
+      {
+        "value": 0.9733333333333334,
+        "description": "min=0.973, mean=0.973, max=0.973, sum=0.973 (1)",
+        "style": {
+          "font-weight": "bold"
+        },
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=qwen_qwen2-72b-instruct"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Claude 3 Sonnet (20240229)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.4,
+        "markdown": false
+      },
+      {
+        "value": 0.9466666666666667,
+        "description": "min=0.947, mean=0.947, max=0.947, sum=0.947 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Claude 3 Opus (20240229)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.2,
+        "markdown": false
+      },
+      {
+        "value": 0.8333333333333334,
+        "description": "min=0.833, mean=0.833, max=0.833, sum=0.833 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Gemini 1.5 Pro (001)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.0,
+        "markdown": false
+      },
+      {
+        "value": 0.5333333333333333,
+        "description": "min=0.533, mean=0.533, max=0.533, sum=0.533 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=google_gemini-1.5-pro-001"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-4 (0613)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.8,
+        "markdown": false
+      },
+      {
+        "value": 0.96,
+        "description": "min=0.96, mean=0.96, max=0.96, sum=0.96 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-4-0613"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-4o (2024-05-13)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.6,
+        "markdown": false
+      },
+      {
+        "value": 0.9533333333333334,
+        "description": "min=0.953, mean=0.953, max=0.953, sum=0.953 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-4o-2024-05-13"
+        ]
+      }
+    ]
+  ],
+  "links": [
+    {
+      "text": "LaTeX",
+      "href": "benchmark_output/runs/v1/groups/latex/harms_accuracy.tex"
+    },
+    {
+      "text": "JSON",
+      "href": "benchmark_output/runs/v1/groups/json/harms_accuracy.json"
+    }
+  ],
+  "name": "accuracy"
+}
