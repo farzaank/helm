@@ -18,19 +18,10 @@ function NavDropdown() {
         setProjectMetadata(data);
         // set currProjectMetadata to val where projectMetadataEntry.id matches window.PROJECT_ID
         if (window.PROJECT_ID) {
-          if (window.PROJECT_ID === "home") {
-            setCurrProjectMetadata({
-              id: "home",
-              title: "All Leaderboards",
-              description: "Home page for all HELM leaderboards.",
-              releases: [],
-            });
-          } else {
-            const currentEntry = data.find(
-              (entry) => entry.id === window.PROJECT_ID,
-            );
-            setCurrProjectMetadata(currentEntry);
-          }
+          const currentEntry = data.find(
+            (entry) => entry.id === window.PROJECT_ID,
+          );
+          setCurrProjectMetadata(currentEntry);
           // handles falling back to HELM lite as was previously done in this file
         } else {
           const currentEntry = data.find((entry) => entry.id === "lite");
@@ -50,11 +41,11 @@ function NavDropdown() {
   }
 
   return (
-    <div className="dropdown">
+    <div className="dropdown z-50">
       <div
         tabIndex={0}
         role="button"
-        className="btn normal-case bg-white font-bold p-2 border-0 text-lg block whitespace-nowrap"
+        className="btn normal-case bg-white font-bold p-2 border-0 text-lg block whitespace-nowrap z-40"
         aria-haspopup="true"
         aria-controls="menu"
       >
@@ -71,15 +62,15 @@ function NavDropdown() {
         role="menu"
       >
         {projectMetadata.map((item, index) => (
-          <li key={index}>
+          <li key={index} className="z-40">
             <a
               href={getReleaseUrl(undefined, item.id)}
-              className={"block "}
+              className="block"
               role="menuitem"
             >
               <strong
                 className={
-                  "" + (currProjectMetadata.title === item.title && "underline")
+                  currProjectMetadata.title === item.title ? "underline" : ""
                 }
               >
                 {item.title}
