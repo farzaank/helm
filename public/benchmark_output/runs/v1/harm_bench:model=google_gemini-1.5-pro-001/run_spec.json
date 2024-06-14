@@ -1,7 +1,7 @@
 {
   "name": "harm_bench:model=google_gemini-1.5-pro-001",
   "scenario_spec": {
-    "class_name": "helm.benchmark.scenarios.anthropic_red_team_scenario.AnthropicRedTeamScenario",
+    "class_name": "helm.benchmark.scenarios.harm_bench_scenario.HarmBenchScenario",
     "args": {}
   },
   "adapter_spec": {
@@ -32,11 +32,11 @@
   },
   "metric_specs": [
     {
-      "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamScoreMetric",
+      "class_name": "helm.benchmark.metrics.harm_bench_metrics.HarmBenchScoreMetric",
       "args": {}
     },
     {
-      "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamBasicGenerationMetric",
+      "class_name": "helm.benchmark.metrics.harm_bench_metrics.HarmBenchBasicGenerationMetric",
       "args": {}
     },
     {
@@ -59,7 +59,7 @@
   ],
   "annotators": [
     {
-      "class_name": "helm.benchmark.annotation.anthropic_red_team_annotator.AnthropicRedTeamAnnotator",
+      "class_name": "helm.benchmark.annotation.harm_bench_annotator.HarmBenchAnnotator",
       "args": {}
     }
   ]

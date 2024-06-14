@@ -1,5 +1,401 @@
 [
   {
+    "name": "anthropic_red_team:model=anthropic_claude-3-opus-20240229",
+    "scenario_spec": {
+      "class_name": "helm.benchmark.scenarios.anthropic_red_team_scenario.AnthropicRedTeamScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "",
+      "instance_prefix": "",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 150,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "anthropic/claude-3-opus-20240229",
+      "model": "anthropic/claude-3-opus-20240229",
+      "temperature": 0.0,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamScoreMetric",
+        "args": {}
+      },
+      {
+        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamBasicGenerationMetric",
+        "args": {}
+      },
+      {
+        "class_name": "helm.benchmark.metrics.basic_metrics.InstancesPerSplitMetric",
+        "args": {}
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "anthropic_red_team"
+    ],
+    "annotators": [
+      {
+        "class_name": "helm.benchmark.annotation.anthropic_red_team_annotator.AnthropicRedTeamAnnotator",
+        "args": {}
+      }
+    ]
+  },
+  {
+    "name": "anthropic_red_team:model=anthropic_claude-3-sonnet-20240229",
+    "scenario_spec": {
+      "class_name": "helm.benchmark.scenarios.anthropic_red_team_scenario.AnthropicRedTeamScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "",
+      "instance_prefix": "",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 150,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "anthropic/claude-3-sonnet-20240229",
+      "model": "anthropic/claude-3-sonnet-20240229",
+      "temperature": 0.0,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamScoreMetric",
+        "args": {}
+      },
+      {
+        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamBasicGenerationMetric",
+        "args": {}
+      },
+      {
+        "class_name": "helm.benchmark.metrics.basic_metrics.InstancesPerSplitMetric",
+        "args": {}
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "anthropic_red_team"
+    ],
+    "annotators": [
+      {
+        "class_name": "helm.benchmark.annotation.anthropic_red_team_annotator.AnthropicRedTeamAnnotator",
+        "args": {}
+      }
+    ]
+  },
+  {
+    "name": "anthropic_red_team:model=google_gemini-1.5-pro-001",
+    "scenario_spec": {
+      "class_name": "helm.benchmark.scenarios.anthropic_red_team_scenario.AnthropicRedTeamScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "",
+      "instance_prefix": "",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 150,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-1.5-pro-001",
+      "model": "google/gemini-1.5-pro-001",
+      "temperature": 0.0,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamScoreMetric",
+        "args": {}
+      },
+      {
+        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamBasicGenerationMetric",
+        "args": {}
+      },
+      {
+        "class_name": "helm.benchmark.metrics.basic_metrics.InstancesPerSplitMetric",
+        "args": {}
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "anthropic_red_team"
+    ],
+    "annotators": [
+      {
+        "class_name": "helm.benchmark.annotation.anthropic_red_team_annotator.AnthropicRedTeamAnnotator",
+        "args": {}
+      }
+    ]
+  },
+  {
+    "name": "anthropic_red_team:model=openai_gpt-4-0613",
+    "scenario_spec": {
+      "class_name": "helm.benchmark.scenarios.anthropic_red_team_scenario.AnthropicRedTeamScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "",
+      "instance_prefix": "",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 150,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "openai/gpt-4-0613",
+      "model": "openai/gpt-4-0613",
+      "temperature": 0.0,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamScoreMetric",
+        "args": {}
+      },
+      {
+        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamBasicGenerationMetric",
+        "args": {}
+      },
+      {
+        "class_name": "helm.benchmark.metrics.basic_metrics.InstancesPerSplitMetric",
+        "args": {}
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "anthropic_red_team"
+    ],
+    "annotators": [
+      {
+        "class_name": "helm.benchmark.annotation.anthropic_red_team_annotator.AnthropicRedTeamAnnotator",
+        "args": {}
+      }
+    ]
+  },
+  {
+    "name": "anthropic_red_team:model=openai_gpt-4o-2024-05-13",
+    "scenario_spec": {
+      "class_name": "helm.benchmark.scenarios.anthropic_red_team_scenario.AnthropicRedTeamScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "",
+      "instance_prefix": "",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 150,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "openai/gpt-4o-2024-05-13",
+      "model": "openai/gpt-4o-2024-05-13",
+      "temperature": 0.0,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamScoreMetric",
+        "args": {}
+      },
+      {
+        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamBasicGenerationMetric",
+        "args": {}
+      },
+      {
+        "class_name": "helm.benchmark.metrics.basic_metrics.InstancesPerSplitMetric",
+        "args": {}
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "anthropic_red_team"
+    ],
+    "annotators": [
+      {
+        "class_name": "helm.benchmark.annotation.anthropic_red_team_annotator.AnthropicRedTeamAnnotator",
+        "args": {}
+      }
+    ]
+  },
+  {
+    "name": "anthropic_red_team:model=qwen_qwen2-72b-instruct",
+    "scenario_spec": {
+      "class_name": "helm.benchmark.scenarios.anthropic_red_team_scenario.AnthropicRedTeamScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "",
+      "instance_prefix": "",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 150,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "together/qwen2-72b-instruct",
+      "model": "qwen/qwen2-72b-instruct",
+      "temperature": 0.0,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamScoreMetric",
+        "args": {}
+      },
+      {
+        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamBasicGenerationMetric",
+        "args": {}
+      },
+      {
+        "class_name": "helm.benchmark.metrics.basic_metrics.InstancesPerSplitMetric",
+        "args": {}
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "anthropic_red_team"
+    ],
+    "annotators": [
+      {
+        "class_name": "helm.benchmark.annotation.anthropic_red_team_annotator.AnthropicRedTeamAnnotator",
+        "args": {}
+      }
+    ]
+  },
+  {
     "name": "bbq:subject=all,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229",
     "scenario_spec": {
       "class_name": "helm.benchmark.scenarios.bbq_scenario.BBQScenario",
@@ -446,75 +842,9 @@
     ]
   },
   {
-    "name": "harm_bench:model=anthropic_claude-3-opus-20240229",
-    "scenario_spec": {
-      "class_name": "helm.benchmark.scenarios.anthropic_red_team_scenario.AnthropicRedTeamScenario",
-      "args": {}
-    },
-    "adapter_spec": {
-      "method": "generation",
-      "global_prefix": "",
-      "global_suffix": "",
-      "instructions": "",
-      "input_prefix": "",
-      "input_suffix": "",
-      "reference_prefix": "A. ",
-      "reference_suffix": "\n",
-      "output_prefix": "",
-      "output_suffix": "",
-      "instance_prefix": "",
-      "substitutions": [],
-      "max_train_instances": 0,
-      "max_eval_instances": 150,
-      "num_outputs": 1,
-      "num_train_trials": 1,
-      "num_trials": 1,
-      "sample_train": true,
-      "model_deployment": "anthropic/claude-3-opus-20240229",
-      "model": "anthropic/claude-3-opus-20240229",
-      "temperature": 0.0,
-      "max_tokens": 512,
-      "stop_sequences": [],
-      "multi_label": false
-    },
-    "metric_specs": [
-      {
-        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamScoreMetric",
-        "args": {}
-      },
-      {
-        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamBasicGenerationMetric",
-        "args": {}
-      },
-      {
-        "class_name": "helm.benchmark.metrics.basic_metrics.InstancesPerSplitMetric",
-        "args": {}
-      }
-    ],
-    "data_augmenter_spec": {
-      "perturbation_specs": [],
-      "should_augment_train_instances": false,
-      "should_include_original_train": false,
-      "should_skip_unchanged_train": false,
-      "should_augment_eval_instances": false,
-      "should_include_original_eval": false,
-      "should_skip_unchanged_eval": false,
-      "seeds_per_instance": 1
-    },
-    "groups": [
-      "harm_bench"
-    ],
-    "annotators": [
-      {
-        "class_name": "helm.benchmark.annotation.anthropic_red_team_annotator.AnthropicRedTeamAnnotator",
-        "args": {}
-      }
-    ]
-  },
-  {
     "name": "harm_bench:model=anthropic_claude-3-sonnet-20240229",
     "scenario_spec": {
-      "class_name": "helm.benchmark.scenarios.anthropic_red_team_scenario.AnthropicRedTeamScenario",
+      "class_name": "helm.benchmark.scenarios.harm_bench_scenario.HarmBenchScenario",
       "args": {}
     },
     "adapter_spec": {
@@ -545,11 +875,11 @@
     },
     "metric_specs": [
       {
-        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamScoreMetric",
+        "class_name": "helm.benchmark.metrics.harm_bench_metrics.HarmBenchScoreMetric",
         "args": {}
       },
       {
-        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamBasicGenerationMetric",
+        "class_name": "helm.benchmark.metrics.harm_bench_metrics.HarmBenchBasicGenerationMetric",
         "args": {}
       },
       {
@@ -572,7 +902,7 @@
     ],
     "annotators": [
       {
-        "class_name": "helm.benchmark.annotation.anthropic_red_team_annotator.AnthropicRedTeamAnnotator",
+        "class_name": "helm.benchmark.annotation.harm_bench_annotator.HarmBenchAnnotator",
         "args": {}
       }
     ]
@@ -580,7 +910,7 @@
   {
     "name": "harm_bench:model=google_gemini-1.5-pro-001",
     "scenario_spec": {
-      "class_name": "helm.benchmark.scenarios.anthropic_red_team_scenario.AnthropicRedTeamScenario",
+      "class_name": "helm.benchmark.scenarios.harm_bench_scenario.HarmBenchScenario",
       "args": {}
     },
     "adapter_spec": {
@@ -611,11 +941,11 @@
     },
     "metric_specs": [
       {
-        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamScoreMetric",
+        "class_name": "helm.benchmark.metrics.harm_bench_metrics.HarmBenchScoreMetric",
         "args": {}
       },
       {
-        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamBasicGenerationMetric",
+        "class_name": "helm.benchmark.metrics.harm_bench_metrics.HarmBenchBasicGenerationMetric",
         "args": {}
       },
       {
@@ -638,7 +968,7 @@
     ],
     "annotators": [
       {
-        "class_name": "helm.benchmark.annotation.anthropic_red_team_annotator.AnthropicRedTeamAnnotator",
+        "class_name": "helm.benchmark.annotation.harm_bench_annotator.HarmBenchAnnotator",
         "args": {}
       }
     ]
@@ -646,7 +976,7 @@
   {
     "name": "harm_bench:model=openai_gpt-4-0613",
     "scenario_spec": {
-      "class_name": "helm.benchmark.scenarios.anthropic_red_team_scenario.AnthropicRedTeamScenario",
+      "class_name": "helm.benchmark.scenarios.harm_bench_scenario.HarmBenchScenario",
       "args": {}
     },
     "adapter_spec": {
@@ -677,77 +1007,11 @@
     },
     "metric_specs": [
       {
-        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamScoreMetric",
+        "class_name": "helm.benchmark.metrics.harm_bench_metrics.HarmBenchScoreMetric",
         "args": {}
       },
       {
-        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamBasicGenerationMetric",
-        "args": {}
-      },
-      {
-        "class_name": "helm.benchmark.metrics.basic_metrics.InstancesPerSplitMetric",
-        "args": {}
-      }
-    ],
-    "data_augmenter_spec": {
-      "perturbation_specs": [],
-      "should_augment_train_instances": false,
-      "should_include_original_train": false,
-      "should_skip_unchanged_train": false,
-      "should_augment_eval_instances": false,
-      "should_include_original_eval": false,
-      "should_skip_unchanged_eval": false,
-      "seeds_per_instance": 1
-    },
-    "groups": [
-      "harm_bench"
-    ],
-    "annotators": [
-      {
-        "class_name": "helm.benchmark.annotation.anthropic_red_team_annotator.AnthropicRedTeamAnnotator",
-        "args": {}
-      }
-    ]
-  },
-  {
-    "name": "harm_bench:model=openai_gpt-4o-2024-05-13",
-    "scenario_spec": {
-      "class_name": "helm.benchmark.scenarios.anthropic_red_team_scenario.AnthropicRedTeamScenario",
-      "args": {}
-    },
-    "adapter_spec": {
-      "method": "generation",
-      "global_prefix": "",
-      "global_suffix": "",
-      "instructions": "",
-      "input_prefix": "",
-      "input_suffix": "",
-      "reference_prefix": "A. ",
-      "reference_suffix": "\n",
-      "output_prefix": "",
-      "output_suffix": "",
-      "instance_prefix": "",
-      "substitutions": [],
-      "max_train_instances": 0,
-      "max_eval_instances": 150,
-      "num_outputs": 1,
-      "num_train_trials": 1,
-      "num_trials": 1,
-      "sample_train": true,
-      "model_deployment": "openai/gpt-4o-2024-05-13",
-      "model": "openai/gpt-4o-2024-05-13",
-      "temperature": 0.0,
-      "max_tokens": 512,
-      "stop_sequences": [],
-      "multi_label": false
-    },
-    "metric_specs": [
-      {
-        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamScoreMetric",
-        "args": {}
-      },
-      {
-        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamBasicGenerationMetric",
+        "class_name": "helm.benchmark.metrics.harm_bench_metrics.HarmBenchBasicGenerationMetric",
         "args": {}
       },
       {
@@ -770,7 +1034,7 @@
     ],
     "annotators": [
       {
-        "class_name": "helm.benchmark.annotation.anthropic_red_team_annotator.AnthropicRedTeamAnnotator",
+        "class_name": "helm.benchmark.annotation.harm_bench_annotator.HarmBenchAnnotator",
         "args": {}
       }
     ]
@@ -778,7 +1042,7 @@
   {
     "name": "harm_bench:model=qwen_qwen2-72b-instruct",
     "scenario_spec": {
-      "class_name": "helm.benchmark.scenarios.anthropic_red_team_scenario.AnthropicRedTeamScenario",
+      "class_name": "helm.benchmark.scenarios.harm_bench_scenario.HarmBenchScenario",
       "args": {}
     },
     "adapter_spec": {
@@ -809,11 +1073,11 @@
     },
     "metric_specs": [
       {
-        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamScoreMetric",
+        "class_name": "helm.benchmark.metrics.harm_bench_metrics.HarmBenchScoreMetric",
         "args": {}
       },
       {
-        "class_name": "helm.benchmark.metrics.anthropic_red_team_metrics.AnthropicRedTeamBasicGenerationMetric",
+        "class_name": "helm.benchmark.metrics.harm_bench_metrics.HarmBenchBasicGenerationMetric",
         "args": {}
       },
       {
@@ -836,7 +1100,7 @@
     ],
     "annotators": [
       {
-        "class_name": "helm.benchmark.annotation.anthropic_red_team_annotator.AnthropicRedTeamAnnotator",
+        "class_name": "helm.benchmark.annotation.harm_bench_annotator.HarmBenchAnnotator",
         "args": {}
       }
     ]
