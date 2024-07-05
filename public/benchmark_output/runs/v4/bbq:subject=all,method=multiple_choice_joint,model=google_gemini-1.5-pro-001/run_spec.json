@@ -10,7 +10,7 @@
     "method": "multiple_choice_joint",
     "global_prefix": "",
     "global_suffix": "",
-    "instructions": "The following are multiple choice questions (with answers).\n",
+    "instructions": "Answer with only a single letter.\n\nThe following are multiple choice questions (with answers).\n",
     "input_prefix": "Passage: ",
     "input_suffix": "\n",
     "reference_prefix": "A. ",

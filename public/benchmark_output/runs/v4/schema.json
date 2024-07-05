@@ -546,9 +546,42 @@
       "num_parameters": 70000000000
     },
     {
+      "name": "meta/llama-3-8b-chat",
+      "display_name": "Llama 3 Instruct (8B)",
+      "short_display_name": "Llama 3 Instruct (8B)",
+      "description": "Llama 3 is a family of language models that have been trained on more than 15 trillion tokens, and use Grouped-Query Attention (GQA) for improved inference scalability. It used SFT, rejection sampling, PPO and DPO for post-training.",
+      "creator_organization": "Meta",
+      "access": "open",
+      "todo": false,
+      "release_date": "2024-04-18",
+      "num_parameters": 8000000000
+    },
+    {
+      "name": "meta/llama-3-70b-chat",
+      "display_name": "Llama 3 Instruct (70B)",
+      "short_display_name": "Llama 3 Instruct (70B)",
+      "description": "Llama 3 is a family of language models that have been trained on more than 15 trillion tokens, and use Grouped-Query Attention (GQA) for improved inference scalability. It used SFT, rejection sampling, PPO and DPO for post-training.",
+      "creator_organization": "Meta",
+      "access": "open",
+      "todo": false,
+      "release_date": "2024-04-18",
+      "num_parameters": 70000000000
+    },
+    {
       "name": "mistralai/mixtral-8x22b",
       "display_name": "Mixtral (8x22B)",
       "short_display_name": "Mixtral (8x22B)",
+      "description": "Mistral AI's mixture-of-experts model that uses 39B active parameters out of 141B ([blog post](https://mistral.ai/news/mixtral-8x22b/)).",
+      "creator_organization": "Mistral AI",
+      "access": "open",
+      "todo": false,
+      "release_date": "2024-04-10",
+      "num_parameters": 176000000000
+    },
+    {
+      "name": "mistralai/mixtral-8x22b-instruct-v0.1",
+      "display_name": "Mixtral Instruct (8x22B)",
+      "short_display_name": "Mixtral Instruct (8x22B)",
       "description": "Mistral AI's mixture-of-experts model that uses 39B active parameters out of 141B ([blog post](https://mistral.ai/news/mixtral-8x22b/)).",
       "creator_organization": "Mistral AI",
       "access": "open",

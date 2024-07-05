@@ -27,6 +27,16 @@
     ],
     [
       {
+        "value": "Llama 3 Instruct (70B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "markdown": false
+      }
+    ],
+    [
+      {
         "value": "Llama 3 (8B)",
         "description": "",
         "markdown": false
@@ -37,7 +47,27 @@
     ],
     [
       {
+        "value": "Llama 3 Instruct (8B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "markdown": false
+      }
+    ],
+    [
+      {
         "value": "Mixtral (8x22B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "markdown": false
+      }
+    ],
+    [
+      {
+        "value": "Mixtral Instruct (8x22B)",
         "description": "",
         "markdown": false
       },

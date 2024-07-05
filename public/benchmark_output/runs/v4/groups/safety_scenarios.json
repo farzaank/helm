@@ -63,7 +63,7 @@
           "markdown": false
         },
         {
-          "value": 0.125,
+          "value": 0.11363636363636365,
           "markdown": false
         },
         {
@@ -105,12 +105,61 @@
       ],
       [
         {
+          "value": "Llama 3 Instruct (70B)",
+          "description": "",
+          "markdown": false
+        },
+        {
+          "value": 0.38636363636363635,
+          "markdown": false
+        },
+        {
+          "value": 0.7125,
+          "description": "min=0.713, mean=0.713, max=0.713, sum=0.713 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 1.0,
+          "description": "min=1, mean=1, max=1, sum=1 (1)",
+          "style": {
+            "font-weight": "bold"
+          },
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 0.29,
+          "description": "min=0.29, mean=0.29, max=0.29, sum=0.29 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 0.9775,
+          "description": "min=0.978, mean=0.978, max=0.978, sum=0.978 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=meta_llama-3-70b-chat"
+          ]
+        }
+      ],
+      [
+        {
           "value": "Llama 3 (8B)",
           "description": "",
           "markdown": false
         },
         {
-          "value": 0.09375,
+          "value": 0.06818181818181818,
           "markdown": false
         },
         {
@@ -152,12 +201,59 @@
       ],
       [
         {
+          "value": "Llama 3 Instruct (8B)",
+          "description": "",
+          "markdown": false
+        },
+        {
+          "value": 0.5454545454545454,
+          "markdown": false
+        },
+        {
+          "value": 0.815,
+          "description": "min=0.815, mean=0.815, max=0.815, sum=0.815 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 0.99,
+          "description": "min=0.99, mean=0.99, max=0.99, sum=0.99 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 0.74,
+          "description": "min=0.74, mean=0.74, max=0.74, sum=0.74 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 0.99875,
+          "description": "min=0.999, mean=0.999, max=0.999, sum=0.999 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=meta_llama-3-8b-chat"
+          ]
+        }
+      ],
+      [
+        {
           "value": "Mixtral (8x22B)",
           "description": "",
           "markdown": false
         },
         {
-          "value": 0.25,
+          "value": 0.20454545454545453,
           "markdown": false
         },
         {
@@ -199,12 +295,59 @@
       ],
       [
         {
+          "value": "Mixtral Instruct (8x22B)",
+          "description": "",
+          "markdown": false
+        },
+        {
+          "value": 0.3409090909090909,
+          "markdown": false
+        },
+        {
+          "value": 0.5775,
+          "description": "min=0.578, mean=0.578, max=0.578, sum=0.578 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 0.9375,
+          "description": "min=0.938, mean=0.938, max=0.938, sum=0.938 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 0.92,
+          "description": "min=0.92, mean=0.92, max=0.92, sum=0.92 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 0.94625,
+          "description": "min=0.946, mean=0.946, max=0.946, sum=0.946 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        }
+      ],
+      [
+        {
           "value": "Qwen2 Instruct (72B)",
           "description": "",
           "markdown": false
         },
         {
-          "value": 0.625,
+          "value": 0.6590909090909091,
           "markdown": false
         },
         {
@@ -253,7 +396,7 @@
           "markdown": false
         },
         {
-          "value": 0.75,
+          "value": 0.7727272727272727,
           "markdown": false
         },
         {
@@ -302,7 +445,7 @@
           "markdown": false
         },
         {
-          "value": 0.78125,
+          "value": 0.7954545454545454,
           "style": {
             "font-weight": "bold"
           },
@@ -356,7 +499,7 @@
           "markdown": false
         },
         {
-          "value": 0.5,
+          "value": 0.7272727272727273,
           "markdown": false
         },
         {
@@ -378,8 +521,8 @@
           ]
         },
         {
-          "value": 0.0,
-          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "value": 0.94,
+          "description": "min=0.94, mean=0.94, max=0.94, sum=0.94 (1)",
           "style": {},
           "markdown": false,
           "run_spec_names": [
@@ -405,7 +548,7 @@
           "markdown": false
         },
         {
-          "value": 0.71875,
+          "value": 0.7272727272727273,
           "markdown": false
         },
         {
@@ -454,7 +597,7 @@
           "markdown": false
         },
         {
-          "value": 0.65625,
+          "value": 0.6590909090909091,
           "markdown": false
         },
         {
@@ -538,6 +681,16 @@
       ],
       [
         {
+          "value": "Llama 3 Instruct (70B)",
+          "description": "",
+          "markdown": false
+        },
+        {
+          "markdown": false
+        }
+      ],
+      [
+        {
           "value": "Llama 3 (8B)",
           "description": "",
           "markdown": false
@@ -548,7 +701,27 @@
       ],
       [
         {
+          "value": "Llama 3 Instruct (8B)",
+          "description": "",
+          "markdown": false
+        },
+        {
+          "markdown": false
+        }
+      ],
+      [
+        {
           "value": "Mixtral (8x22B)",
+          "description": "",
+          "markdown": false
+        },
+        {
+          "markdown": false
+        }
+      ],
+      [
+        {
+          "value": "Mixtral Instruct (8x22B)",
           "description": "",
           "markdown": false
         },
@@ -1008,6 +1181,193 @@
       ],
       [
         {
+          "value": "Llama 3 Instruct (70B)",
+          "description": "",
+          "markdown": false
+        },
+        {
+          "value": 100.0,
+          "description": "min=100, mean=100, max=100, sum=100 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 95.23,
+          "description": "min=95.23, mean=95.23, max=95.23, sum=95.23 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 180.21,
+          "description": "min=180.21, mean=180.21, max=180.21, sum=180.21 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 100.0,
+          "description": "min=100, mean=100, max=100, sum=100 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 12.54,
+          "description": "min=12.54, mean=12.54, max=12.54, sum=12.54 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 74.19,
+          "description": "min=74.19, mean=74.19, max=74.19, sum=74.19 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 100.0,
+          "description": "min=100, mean=100, max=100, sum=100 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 85.36,
+          "description": "min=85.36, mean=85.36, max=85.36, sum=85.36 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 1.0,
+          "description": "min=1, mean=1, max=1, sum=1 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 100.0,
+          "description": "min=100, mean=100, max=100, sum=100 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 13.64,
+          "description": "min=13.64, mean=13.64, max=13.64, sum=13.64 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=meta_llama-3-70b-chat"
+          ]
+        },
+        {
+          "value": 186.44,
+          "description": "min=186.44, mean=186.44, max=186.44, sum=186.44 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=meta_llama-3-70b-chat"
+          ]
+        }
+      ],
+      [
+        {
           "value": "Llama 3 (8B)",
           "description": "",
           "markdown": false
@@ -1195,6 +1555,193 @@
       ],
       [
         {
+          "value": "Llama 3 Instruct (8B)",
+          "description": "",
+          "markdown": false
+        },
+        {
+          "value": 100.0,
+          "description": "min=100, mean=100, max=100, sum=100 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 95.23,
+          "description": "min=95.23, mean=95.23, max=95.23, sum=95.23 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 146.06,
+          "description": "min=146.06, mean=146.06, max=146.06, sum=146.06 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 100.0,
+          "description": "min=100, mean=100, max=100, sum=100 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 12.54,
+          "description": "min=12.54, mean=12.54, max=12.54, sum=12.54 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 41.25,
+          "description": "min=41.25, mean=41.25, max=41.25, sum=41.25 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 100.0,
+          "description": "min=100, mean=100, max=100, sum=100 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 85.36,
+          "description": "min=85.36, mean=85.36, max=85.36, sum=85.36 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 1.0,
+          "description": "min=1, mean=1, max=1, sum=1 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 100.0,
+          "description": "min=100, mean=100, max=100, sum=100 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 13.64,
+          "description": "min=13.64, mean=13.64, max=13.64, sum=13.64 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=meta_llama-3-8b-chat"
+          ]
+        },
+        {
+          "value": 120.17,
+          "description": "min=120.17, mean=120.17, max=120.17, sum=120.17 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=meta_llama-3-8b-chat"
+          ]
+        }
+      ],
+      [
+        {
           "value": "Mixtral (8x22B)",
           "description": "",
           "markdown": false
@@ -1377,6 +1924,193 @@
           "markdown": false,
           "run_spec_names": [
             "anthropic_red_team:model=mistralai_mixtral-8x22b"
+          ]
+        }
+      ],
+      [
+        {
+          "value": "Mixtral Instruct (8x22B)",
+          "description": "",
+          "markdown": false
+        },
+        {
+          "value": 100.0,
+          "description": "min=100, mean=100, max=100, sum=100 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 114.45,
+          "description": "min=114.45, mean=114.45, max=114.45, sum=114.45 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 347.09,
+          "description": "min=347.09, mean=347.09, max=347.09, sum=347.09 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "harm_bench:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 100.0,
+          "description": "min=100, mean=100, max=100, sum=100 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 13.48,
+          "description": "min=13.48, mean=13.48, max=13.48, sum=13.48 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 167.95,
+          "description": "min=167.95, mean=167.95, max=167.95, sum=167.95 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "simple_safety_tests:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 100.0,
+          "description": "min=100, mean=100, max=100, sum=100 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 96.37,
+          "description": "min=96.37, mean=96.37, max=96.37, sum=96.37 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 1.0,
+          "description": "min=1, mean=1, max=1, sum=1 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "bbq:subject=all,method=multiple_choice_joint,model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 100.0,
+          "description": "min=100, mean=100, max=100, sum=100 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 0.0,
+          "description": "min=0, mean=0, max=0, sum=0 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 14.56,
+          "description": "min=14.56, mean=14.56, max=14.56, sum=14.56 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=mistralai_mixtral-8x22b-instruct-v0.1"
+          ]
+        },
+        {
+          "value": 161.29,
+          "description": "min=161.29, mean=161.29, max=161.29, sum=161.29 (1)",
+          "style": {},
+          "markdown": false,
+          "run_spec_names": [
+            "anthropic_red_team:model=mistralai_mixtral-8x22b-instruct-v0.1"
           ]
         }
       ],
@@ -2065,8 +2799,8 @@
           ]
         },
         {
-          "value": 87.34,
-          "description": "min=87.34, mean=87.34, max=87.34, sum=87.34 (1)",
+          "value": 95.34,
+          "description": "min=95.34, mean=95.34, max=95.34, sum=95.34 (1)",
           "style": {},
           "markdown": false,
           "run_spec_names": [
@@ -2544,6 +3278,16 @@
       ],
       [
         {
+          "value": "Llama 3 Instruct (70B)",
+          "description": "",
+          "markdown": false
+        },
+        {
+          "markdown": false
+        }
+      ],
+      [
+        {
           "value": "Llama 3 (8B)",
           "description": "",
           "markdown": false
@@ -2554,7 +3298,27 @@
       ],
       [
         {
+          "value": "Llama 3 Instruct (8B)",
+          "description": "",
+          "markdown": false
+        },
+        {
+          "markdown": false
+        }
+      ],
+      [
+        {
           "value": "Mixtral (8x22B)",
+          "description": "",
+          "markdown": false
+        },
+        {
+          "markdown": false
+        }
+      ],
+      [
+        {
+          "value": "Mixtral Instruct (8x22B)",
           "description": "",
           "markdown": false
         },
