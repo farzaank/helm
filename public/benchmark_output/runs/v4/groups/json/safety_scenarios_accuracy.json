@@ -52,56 +52,19 @@
         "metric": "Anthropic Red Team - Model Evaluated Safety score",
         "run_group": "Anthropic Red Team"
       }
+    },
+    {
+      "value": "XSTest - XSTest - Model Evaluated Safety score",
+      "description": "XSTest\n\nXSTest - Model Evaluated Safety score: XSTest - Model Evaluated Safety score",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "XSTest - Model Evaluated Safety score",
+        "run_group": "XSTest"
+      }
     }
   ],
   "rows": [
-    [
-      {
-        "value": "Llama 3 (70B)",
-        "description": "",
-        "markdown": false
-      },
-      {
-        "value": 0.11363636363636365,
-        "markdown": false
-      },
-      {
-        "value": 0.3725,
-        "description": "min=0.372, mean=0.372, max=0.372, sum=0.372 (1)",
-        "style": {},
-        "markdown": false,
-        "run_spec_names": [
-          "harm_bench:model=meta_llama-3-70b"
-        ]
-      },
-      {
-        "value": 0.2225,
-        "description": "min=0.223, mean=0.223, max=0.223, sum=0.223 (1)",
-        "style": {},
-        "markdown": false,
-        "run_spec_names": [
-          "simple_safety_tests:model=meta_llama-3-70b"
-        ]
-      },
-      {
-        "value": 0.86,
-        "description": "min=0.86, mean=0.86, max=0.86, sum=0.86 (1)",
-        "style": {},
-        "markdown": false,
-        "run_spec_names": [
-          "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-70b"
-        ]
-      },
-      {
-        "value": 0.45875,
-        "description": "min=0.459, mean=0.459, max=0.459, sum=0.459 (1)",
-        "style": {},
-        "markdown": false,
-        "run_spec_names": [
-          "anthropic_red_team:model=meta_llama-3-70b"
-        ]
-      }
-    ],
     [
       {
         "value": "Llama 3 Instruct (70B)",
@@ -109,7 +72,7 @@
         "markdown": false
       },
       {
-        "value": 0.38636363636363635,
+        "value": 0.375,
         "markdown": false
       },
       {
@@ -149,52 +112,16 @@
         "run_spec_names": [
           "anthropic_red_team:model=meta_llama-3-70b-chat"
         ]
-      }
-    ],
-    [
-      {
-        "value": "Llama 3 (8B)",
-        "description": "",
-        "markdown": false
       },
       {
-        "value": 0.06818181818181818,
-        "markdown": false
-      },
-      {
-        "value": 0.3375,
-        "description": "min=0.338, mean=0.338, max=0.338, sum=0.338 (1)",
-        "style": {},
+        "value": 0.9675,
+        "description": "min=0.968, mean=0.968, max=0.968, sum=0.968 (1)",
+        "style": {
+          "font-weight": "bold"
+        },
         "markdown": false,
         "run_spec_names": [
-          "harm_bench:model=meta_llama-3-8b"
-        ]
-      },
-      {
-        "value": 0.2875,
-        "description": "min=0.287, mean=0.287, max=0.287, sum=0.287 (1)",
-        "style": {},
-        "markdown": false,
-        "run_spec_names": [
-          "simple_safety_tests:model=meta_llama-3-8b"
-        ]
-      },
-      {
-        "value": 0.66,
-        "description": "min=0.66, mean=0.66, max=0.66, sum=0.66 (1)",
-        "style": {},
-        "markdown": false,
-        "run_spec_names": [
-          "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-8b"
-        ]
-      },
-      {
-        "value": 0.50625,
-        "description": "min=0.506, mean=0.506, max=0.506, sum=0.506 (1)",
-        "style": {},
-        "markdown": false,
-        "run_spec_names": [
-          "anthropic_red_team:model=meta_llama-3-8b"
+          "xstest:model=meta_llama-3-70b-chat"
         ]
       }
     ],
@@ -205,7 +132,7 @@
         "markdown": false
       },
       {
-        "value": 0.5454545454545454,
+        "value": 0.375,
         "markdown": false
       },
       {
@@ -243,52 +170,14 @@
         "run_spec_names": [
           "anthropic_red_team:model=meta_llama-3-8b-chat"
         ]
-      }
-    ],
-    [
-      {
-        "value": "Mixtral (8x22B)",
-        "description": "",
-        "markdown": false
       },
       {
-        "value": 0.20454545454545453,
-        "markdown": false
-      },
-      {
-        "value": 0.5225,
-        "description": "min=0.522, mean=0.522, max=0.522, sum=0.522 (1)",
+        "value": 0.9275,
+        "description": "min=0.927, mean=0.927, max=0.927, sum=0.927 (1)",
         "style": {},
         "markdown": false,
         "run_spec_names": [
-          "harm_bench:model=mistralai_mixtral-8x22b"
-        ]
-      },
-      {
-        "value": 0.415,
-        "description": "min=0.415, mean=0.415, max=0.415, sum=0.415 (1)",
-        "style": {},
-        "markdown": false,
-        "run_spec_names": [
-          "simple_safety_tests:model=mistralai_mixtral-8x22b"
-        ]
-      },
-      {
-        "value": 0.75,
-        "description": "min=0.75, mean=0.75, max=0.75, sum=0.75 (1)",
-        "style": {},
-        "markdown": false,
-        "run_spec_names": [
-          "bbq:subject=all,method=multiple_choice_joint,model=mistralai_mixtral-8x22b"
-        ]
-      },
-      {
-        "value": 0.5675,
-        "description": "min=0.568, mean=0.568, max=0.568, sum=0.568 (1)",
-        "style": {},
-        "markdown": false,
-        "run_spec_names": [
-          "anthropic_red_team:model=mistralai_mixtral-8x22b"
+          "xstest:model=meta_llama-3-8b-chat"
         ]
       }
     ],
@@ -299,7 +188,7 @@
         "markdown": false
       },
       {
-        "value": 0.3409090909090909,
+        "value": 0.125,
         "markdown": false
       },
       {
@@ -337,6 +226,15 @@
         "run_spec_names": [
           "anthropic_red_team:model=mistralai_mixtral-8x22b-instruct-v0.1"
         ]
+      },
+      {
+        "value": 0.9325,
+        "description": "min=0.932, mean=0.932, max=0.932, sum=0.932 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "xstest:model=mistralai_mixtral-8x22b-instruct-v0.1"
+        ]
       }
     ],
     [
@@ -346,7 +244,7 @@
         "markdown": false
       },
       {
-        "value": 0.6590909090909091,
+        "value": 0.5,
         "markdown": false
       },
       {
@@ -386,6 +284,15 @@
         "run_spec_names": [
           "anthropic_red_team:model=qwen_qwen2-72b-instruct"
         ]
+      },
+      {
+        "value": 0.955,
+        "description": "min=0.955, mean=0.955, max=0.955, sum=0.955 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "xstest:model=qwen_qwen2-72b-instruct"
+        ]
       }
     ],
     [
@@ -395,7 +302,7 @@
         "markdown": false
       },
       {
-        "value": 0.7727272727272727,
+        "value": 0.65,
         "markdown": false
       },
       {
@@ -435,6 +342,15 @@
         "run_spec_names": [
           "anthropic_red_team:model=anthropic_claude-3-opus-20240229"
         ]
+      },
+      {
+        "value": 0.9575,
+        "description": "min=0.958, mean=0.958, max=0.958, sum=0.958 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "xstest:model=anthropic_claude-3-opus-20240229"
+        ]
       }
     ],
     [
@@ -444,7 +360,7 @@
         "markdown": false
       },
       {
-        "value": 0.7954545454545454,
+        "value": 0.775,
         "style": {
           "font-weight": "bold"
         },
@@ -489,6 +405,17 @@
         "run_spec_names": [
           "anthropic_red_team:model=anthropic_claude-3-5-sonnet-20240620"
         ]
+      },
+      {
+        "value": 0.9675,
+        "description": "min=0.968, mean=0.968, max=0.968, sum=0.968 (1)",
+        "style": {
+          "font-weight": "bold"
+        },
+        "markdown": false,
+        "run_spec_names": [
+          "xstest:model=anthropic_claude-3-5-sonnet-20240620"
+        ]
       }
     ],
     [
@@ -498,7 +425,7 @@
         "markdown": false
       },
       {
-        "value": 0.7272727272727273,
+        "value": 0.5,
         "markdown": false
       },
       {
@@ -538,6 +465,15 @@
         "run_spec_names": [
           "anthropic_red_team:model=google_gemini-1.5-pro-001"
         ]
+      },
+      {
+        "value": 0.91,
+        "description": "min=0.91, mean=0.91, max=0.91, sum=0.91 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "xstest:model=google_gemini-1.5-pro-001"
+        ]
       }
     ],
     [
@@ -547,7 +483,7 @@
         "markdown": false
       },
       {
-        "value": 0.7272727272727273,
+        "value": 0.625,
         "markdown": false
       },
       {
@@ -587,6 +523,15 @@
         "run_spec_names": [
           "anthropic_red_team:model=openai_gpt-4-turbo-2024-04-09"
         ]
+      },
+      {
+        "value": 0.9625,
+        "description": "min=0.963, mean=0.963, max=0.963, sum=0.963 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "xstest:model=openai_gpt-4-turbo-2024-04-09"
+        ]
       }
     ],
     [
@@ -596,7 +541,7 @@
         "markdown": false
       },
       {
-        "value": 0.6590909090909091,
+        "value": 0.575,
         "markdown": false
       },
       {
@@ -635,6 +580,15 @@
         "markdown": false,
         "run_spec_names": [
           "anthropic_red_team:model=openai_gpt-4o-2024-05-13"
+        ]
+      },
+      {
+        "value": 0.9625,
+        "description": "min=0.963, mean=0.963, max=0.963, sum=0.963 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "xstest:model=openai_gpt-4o-2024-05-13"
         ]
       }
     ]

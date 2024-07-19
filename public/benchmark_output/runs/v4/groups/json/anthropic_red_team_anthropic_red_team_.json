@@ -65,53 +65,6 @@
   "rows": [
     [
       {
-        "value": "Llama 3 (70B)",
-        "description": "",
-        "href": "?group=anthropic_red_team&subgroup=&runSpecs=%5B%22anthropic_red_team%3Amodel%3Dmeta_llama-3-70b%22%5D",
-        "markdown": false,
-        "run_spec_names": [
-          "anthropic_red_team:model=meta_llama-3-70b"
-        ]
-      },
-      {
-        "value": 0.45875,
-        "description": "min=0.459, mean=0.459, max=0.459, sum=0.459 (1)",
-        "style": {},
-        "markdown": false
-      },
-      {
-        "value": 100.0,
-        "description": "min=100, mean=100, max=100, sum=100 (1)",
-        "style": {},
-        "markdown": false
-      },
-      {
-        "value": 0.0,
-        "description": "min=0, mean=0, max=0, sum=0 (1)",
-        "style": {},
-        "markdown": false
-      },
-      {
-        "value": 0.0,
-        "description": "min=0, mean=0, max=0, sum=0 (1)",
-        "style": {},
-        "markdown": false
-      },
-      {
-        "value": 13.64,
-        "description": "min=13.64, mean=13.64, max=13.64, sum=13.64 (1)",
-        "style": {},
-        "markdown": false
-      },
-      {
-        "value": 1.0,
-        "description": "min=1, mean=1, max=1, sum=1 (1)",
-        "style": {},
-        "markdown": false
-      }
-    ],
-    [
-      {
         "value": "Llama 3 Instruct (70B)",
         "description": "",
         "href": "?group=anthropic_red_team&subgroup=&runSpecs=%5B%22anthropic_red_team%3Amodel%3Dmeta_llama-3-70b-chat%22%5D",
@@ -159,53 +112,6 @@
     ],
     [
       {
-        "value": "Llama 3 (8B)",
-        "description": "",
-        "href": "?group=anthropic_red_team&subgroup=&runSpecs=%5B%22anthropic_red_team%3Amodel%3Dmeta_llama-3-8b%22%5D",
-        "markdown": false,
-        "run_spec_names": [
-          "anthropic_red_team:model=meta_llama-3-8b"
-        ]
-      },
-      {
-        "value": 0.50625,
-        "description": "min=0.506, mean=0.506, max=0.506, sum=0.506 (1)",
-        "style": {},
-        "markdown": false
-      },
-      {
-        "value": 100.0,
-        "description": "min=100, mean=100, max=100, sum=100 (1)",
-        "style": {},
-        "markdown": false
-      },
-      {
-        "value": 0.0,
-        "description": "min=0, mean=0, max=0, sum=0 (1)",
-        "style": {},
-        "markdown": false
-      },
-      {
-        "value": 0.0,
-        "description": "min=0, mean=0, max=0, sum=0 (1)",
-        "style": {},
-        "markdown": false
-      },
-      {
-        "value": 13.64,
-        "description": "min=13.64, mean=13.64, max=13.64, sum=13.64 (1)",
-        "style": {},
-        "markdown": false
-      },
-      {
-        "value": 1.0,
-        "description": "min=1, mean=1, max=1, sum=1 (1)",
-        "style": {},
-        "markdown": false
-      }
-    ],
-    [
-      {
         "value": "Llama 3 Instruct (8B)",
         "description": "",
         "href": "?group=anthropic_red_team&subgroup=&runSpecs=%5B%22anthropic_red_team%3Amodel%3Dmeta_llama-3-8b-chat%22%5D",
@@ -247,53 +153,6 @@
       {
         "value": 120.17,
         "description": "min=120.17, mean=120.17, max=120.17, sum=120.17 (1)",
-        "style": {},
-        "markdown": false
-      }
-    ],
-    [
-      {
-        "value": "Mixtral (8x22B)",
-        "description": "",
-        "href": "?group=anthropic_red_team&subgroup=&runSpecs=%5B%22anthropic_red_team%3Amodel%3Dmistralai_mixtral-8x22b%22%5D",
-        "markdown": false,
-        "run_spec_names": [
-          "anthropic_red_team:model=mistralai_mixtral-8x22b"
-        ]
-      },
-      {
-        "value": 0.5675,
-        "description": "min=0.568, mean=0.568, max=0.568, sum=0.568 (1)",
-        "style": {},
-        "markdown": false
-      },
-      {
-        "value": 100.0,
-        "description": "min=100, mean=100, max=100, sum=100 (1)",
-        "style": {},
-        "markdown": false
-      },
-      {
-        "value": 0.0,
-        "description": "min=0, mean=0, max=0, sum=0 (1)",
-        "style": {},
-        "markdown": false
-      },
-      {
-        "value": 0.0,
-        "description": "min=0, mean=0, max=0, sum=0 (1)",
-        "style": {},
-        "markdown": false
-      },
-      {
-        "value": 14.56,
-        "description": "min=14.56, mean=14.56, max=14.56, sum=14.56 (1)",
-        "style": {},
-        "markdown": false
-      },
-      {
-        "value": 1.0,
-        "description": "min=1, mean=1, max=1, sum=1 (1)",
         "style": {},
         "markdown": false
       }

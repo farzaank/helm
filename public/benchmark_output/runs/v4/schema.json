@@ -132,6 +132,12 @@
       "lower_is_better": false
     },
     {
+      "name": "xst_score",
+      "display_name": "XSTest - Model Evaluated Safety score",
+      "description": "XSTest - Model Evaluated Safety score",
+      "lower_is_better": false
+    },
+    {
       "name": "bbq_accuracy",
       "display_name": "BBQ accuracy",
       "description": "BBQ accuracy",
@@ -242,7 +248,8 @@
         "harm_bench",
         "simple_safety_tests",
         "bbq",
-        "anthropic_red_team"
+        "anthropic_red_team",
+        "xstest"
       ],
       "subgroup_display_mode": "by_metric",
       "subgroup_metric_groups_hidden": [],
@@ -300,6 +307,37 @@
       "subgroup_metric_groups_hidden": [],
       "environment": {
         "main_name": "sst_score",
+        "main_split": "test"
+      },
+      "category": "Scenarios",
+      "visibility": "all_groups",
+      "taxonomy": {
+        "task": "question answering",
+        "what": "n/a",
+        "when": "n/a",
+        "who": "n/a",
+        "language": "English"
+      },
+      "todo": false,
+      "adapter_keys_shown": [
+        "model_deployment",
+        "model"
+      ]
+    },
+    {
+      "name": "xstest",
+      "display_name": "XSTest",
+      "description": "XSTest",
+      "metric_groups": [
+        "accuracy",
+        "efficiency",
+        "general_information"
+      ],
+      "subgroups": [],
+      "subgroup_display_mode": "by_metric",
+      "subgroup_metric_groups_hidden": [],
+      "environment": {
+        "main_name": "xst_score",
         "main_split": "test"
       },
       "category": "Scenarios",
@@ -524,28 +562,6 @@
       "release_date": "2024-05-24"
     },
     {
-      "name": "meta/llama-3-8b",
-      "display_name": "Llama 3 (8B)",
-      "short_display_name": "Llama 3 (8B)",
-      "description": "Llama 3 is a family of language models that have been trained on more than 15 trillion tokens, and use Grouped-Query Attention (GQA) for improved inference scalability.",
-      "creator_organization": "Meta",
-      "access": "open",
-      "todo": false,
-      "release_date": "2024-04-18",
-      "num_parameters": 8000000000
-    },
-    {
-      "name": "meta/llama-3-70b",
-      "display_name": "Llama 3 (70B)",
-      "short_display_name": "Llama 3 (70B)",
-      "description": "Llama 3 is a family of language models that have been trained on more than 15 trillion tokens, and use Grouped-Query Attention (GQA) for improved inference scalability.",
-      "creator_organization": "Meta",
-      "access": "open",
-      "todo": false,
-      "release_date": "2024-04-18",
-      "num_parameters": 70000000000
-    },
-    {
       "name": "meta/llama-3-8b-chat",
       "display_name": "Llama 3 Instruct (8B)",
       "short_display_name": "Llama 3 Instruct (8B)",
@@ -566,17 +582,6 @@
       "todo": false,
       "release_date": "2024-04-18",
       "num_parameters": 70000000000
-    },
-    {
-      "name": "mistralai/mixtral-8x22b",
-      "display_name": "Mixtral (8x22B)",
-      "short_display_name": "Mixtral (8x22B)",
-      "description": "Mistral AI's mixture-of-experts model that uses 39B active parameters out of 141B ([blog post](https://mistral.ai/news/mixtral-8x22b/)).",
-      "creator_organization": "Mistral AI",
-      "access": "open",
-      "todo": false,
-      "release_date": "2024-04-10",
-      "num_parameters": 176000000000
     },
     {
       "name": "mistralai/mixtral-8x22b-instruct-v0.1",

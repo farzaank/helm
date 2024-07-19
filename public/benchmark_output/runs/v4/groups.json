@@ -66,26 +66,26 @@
         },
         {
           "value": 100.0,
-          "description": "min=100, mean=100, max=100, sum=4800 (48)",
+          "description": "min=100, mean=100, max=100, sum=4500 (45)",
           "markdown": false
         },
         {
-          "value": 1.5,
-          "description": "min=0, mean=1.5, max=3, sum=216 (144)",
+          "value": 1.824000000000001,
+          "description": "min=0, mean=1.824, max=3.12, sum=246.24 (135)",
           "markdown": false
         },
         {
-          "value": 7788.240000000007,
-          "description": "min=12.48, mean=54.085, max=114.45, sum=7788.24 (144)",
+          "value": 6117.48,
+          "description": "min=10.37, mean=45.315, max=114.45, sum=6117.48 (135)",
           "markdown": false
         },
         {
-          "value": 9480.299999999992,
-          "description": "min=0, mean=65.835, max=347.09, sum=9480.3 (144)",
+          "value": 14691.329999999998,
+          "description": "min=0, mean=108.825, max=347.09, sum=14691.33 (135)",
           "markdown": false
         },
         {
-          "value": 12,
+          "value": 9,
           "markdown": false
         }
       ]
@@ -159,26 +159,26 @@
         },
         {
           "value": 100.0,
-          "description": "min=100, mean=100, max=100, sum=1200 (12)",
+          "description": "min=100, mean=100, max=100, sum=900 (9)",
           "markdown": false
         },
         {
           "value": 1.0,
-          "description": "min=1, mean=1, max=1, sum=36 (36)",
+          "description": "min=1, mean=1, max=1, sum=27 (27)",
           "markdown": false
         },
         {
-          "value": 3575.9399999999996,
-          "description": "min=94.13, mean=99.332, max=114.45, sum=3575.94 (36)",
+          "value": 2661.2100000000005,
+          "description": "min=94.13, mean=98.563, max=114.45, sum=2661.21 (27)",
           "markdown": false
         },
         {
-          "value": 3974.3100000000004,
-          "description": "min=0, mean=110.398, max=347.09, sum=3974.31 (36)",
+          "value": 3965.3100000000004,
+          "description": "min=0, mean=146.863, max=347.09, sum=3965.31 (27)",
           "markdown": false
         },
         {
-          "value": 12,
+          "value": 9,
           "markdown": false
         }
       ],
@@ -198,26 +198,65 @@
         },
         {
           "value": 100.0,
-          "description": "min=100, mean=100, max=100, sum=1200 (12)",
+          "description": "min=100, mean=100, max=100, sum=900 (9)",
           "markdown": false
         },
         {
           "value": 2.0,
-          "description": "min=2, mean=2, max=2, sum=72 (36)",
+          "description": "min=2, mean=2, max=2, sum=54 (27)",
           "markdown": false
         },
         {
-          "value": 458.1600000000002,
-          "description": "min=12.48, mean=12.727, max=13.48, sum=458.16 (36)",
+          "value": 342.48,
+          "description": "min=12.48, mean=12.684, max=13.48, sum=342.48 (27)",
           "markdown": false
         },
         {
-          "value": 2175.9,
-          "description": "min=0, mean=60.442, max=167.95, sum=2175.9 (36)",
+          "value": 2166.9,
+          "description": "min=0, mean=80.256, max=167.95, sum=2166.9 (27)",
           "markdown": false
         },
         {
-          "value": 12,
+          "value": 9,
+          "markdown": false
+        }
+      ],
+      [
+        {
+          "value": "XSTest",
+          "href": "?group=xstest",
+          "markdown": false
+        },
+        {
+          "value": "XSTest",
+          "markdown": true
+        },
+        {
+          "value": "generation",
+          "markdown": false
+        },
+        {
+          "value": 100.0,
+          "description": "min=100, mean=100, max=100, sum=900 (9)",
+          "markdown": false
+        },
+        {
+          "value": 3.1200000000000006,
+          "description": "min=3.12, mean=3.12, max=3.12, sum=84.24 (27)",
+          "markdown": false
+        },
+        {
+          "value": 286.43999999999994,
+          "description": "min=10.37, mean=10.609, max=11.39, sum=286.44 (27)",
+          "markdown": false
+        },
+        {
+          "value": 5247.030000000001,
+          "description": "min=0, mean=194.334, max=251.61, sum=5247.03 (27)",
+          "markdown": false
+        },
+        {
+          "value": 9,
           "markdown": false
         }
       ],
@@ -237,26 +276,26 @@
         },
         {
           "value": 100.0,
-          "description": "min=100, mean=100, max=100, sum=1200 (12)",
+          "description": "min=100, mean=100, max=100, sum=900 (9)",
           "markdown": false
         },
         {
           "value": 3.0,
-          "description": "min=3, mean=3, max=3, sum=108 (36)",
+          "description": "min=3, mean=3, max=3, sum=81 (27)",
           "markdown": false
         },
         {
-          "value": 3255.8399999999992,
-          "description": "min=84.31, mean=90.44, max=100.27, sum=3255.84 (36)",
+          "value": 2454.5699999999997,
+          "description": "min=84.31, mean=90.91, max=100.27, sum=2454.57 (27)",
           "markdown": false
         },
         {
-          "value": 33.0,
-          "description": "min=0, mean=0.917, max=1, sum=33 (36)",
+          "value": 24.0,
+          "description": "min=0, mean=0.889, max=1, sum=24 (27)",
           "markdown": false
         },
         {
-          "value": 12,
+          "value": 9,
           "markdown": false
         }
       ],
@@ -276,26 +315,26 @@
         },
         {
           "value": 100.0,
-          "description": "min=100, mean=100, max=100, sum=1200 (12)",
+          "description": "min=100, mean=100, max=100, sum=900 (9)",
           "markdown": false
         },
         {
           "value": 0.0,
-          "description": "min=0, mean=0, max=0, sum=0 (36)",
+          "description": "min=0, mean=0, max=0, sum=0 (27)",
           "markdown": false
         },
         {
-          "value": 498.3,
-          "description": "min=13.47, mean=13.842, max=14.56, sum=498.3 (36)",
+          "value": 372.7800000000001,
+          "description": "min=13.47, mean=13.807, max=14.56, sum=372.78 (27)",
           "markdown": false
         },
         {
-          "value": 3297.09,
-          "description": "min=0, mean=91.586, max=186.44, sum=3297.09 (36)",
+          "value": 3288.09,
+          "description": "min=0, mean=121.781, max=186.44, sum=3288.09 (27)",
           "markdown": false
         },
         {
-          "value": 12,
+          "value": 9,
           "markdown": false
         }
       ]
