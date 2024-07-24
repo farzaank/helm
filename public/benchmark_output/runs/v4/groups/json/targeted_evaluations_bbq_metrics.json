@@ -1,0 +1,405 @@
+{
+  "title": "BBQ metrics",
+  "header": [
+    {
+      "value": "Model/adapter",
+      "markdown": false,
+      "metadata": {}
+    },
+    {
+      "value": "Mean win rate",
+      "description": "How many models this model outperform on average (over columns).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {}
+    },
+    {
+      "value": "BBQ - BBQ (ambiguous)",
+      "description": "The Bias Benchmark for Question Answering (BBQ) for measuring social bias in question answering in ambiguous and unambigous context [(Parrish et al., 2022)](https://aclanthology.org/2022.findings-acl.165/).\n\nBBQ (ambiguous): Metric of [Parrish et al. (2022)](https://aclanthology.org/2022.findings-acl.165/) for BBQ on ambiguous examples.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "BBQ (ambiguous)",
+        "run_group": "BBQ"
+      }
+    },
+    {
+      "value": "BBQ - BBQ (unambiguous)",
+      "description": "The Bias Benchmark for Question Answering (BBQ) for measuring social bias in question answering in ambiguous and unambigous context [(Parrish et al., 2022)](https://aclanthology.org/2022.findings-acl.165/).\n\nBBQ (unambiguous): Metric of [Parrish et al. (2022)](https://aclanthology.org/2022.findings-acl.165/) for BBQ on unambiguous examples.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "BBQ (unambiguous)",
+        "run_group": "BBQ"
+      }
+    }
+  ],
+  "rows": [
+    [
+      {
+        "value": "Llama 3 Instruct (70B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.5909090909090909,
+        "markdown": false
+      },
+      {
+        "value": 0.066,
+        "description": "min=0.066, mean=0.066, max=0.066, sum=0.066 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-70b-chat"
+        ]
+      },
+      {
+        "value": -0.41666666666666663,
+        "description": "min=-0.417, mean=-0.417, max=-0.417, sum=-0.417 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-70b-chat"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Llama 3 Instruct (8B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.36363636363636365,
+        "markdown": false
+      },
+      {
+        "value": 0.08615384615384616,
+        "description": "min=0.086, mean=0.086, max=0.086, sum=0.086 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-8b-chat"
+        ]
+      },
+      {
+        "value": -0.41666666666666663,
+        "description": "min=-0.417, mean=-0.417, max=-0.417, sum=-0.417 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-8b-chat"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Mixtral Instruct (8x22B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.22727272727272727,
+        "markdown": false
+      },
+      {
+        "value": 0.07999999999999996,
+        "description": "min=0.08, mean=0.08, max=0.08, sum=0.08 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=mistralai_mixtral-8x22b-instruct-v0.1"
+        ]
+      },
+      {
+        "value": -0.3913043478260869,
+        "description": "min=-0.391, mean=-0.391, max=-0.391, sum=-0.391 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=mistralai_mixtral-8x22b-instruct-v0.1"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Qwen2 Instruct (72B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.6818181818181819,
+        "markdown": false
+      },
+      {
+        "value": 0.016666666666666677,
+        "description": "min=0.017, mean=0.017, max=0.017, sum=0.017 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=qwen_qwen2-72b-instruct"
+        ]
+      },
+      {
+        "value": -0.41666666666666663,
+        "description": "min=-0.417, mean=-0.417, max=-0.417, sum=-0.417 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=qwen_qwen2-72b-instruct"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Claude 3 Opus (20240229)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 1.0,
+        "style": {
+          "font-weight": "bold"
+        },
+        "markdown": false
+      },
+      {
+        "value": -0.24,
+        "description": "min=-0.24, mean=-0.24, max=-0.24, sum=-0.24 (1)",
+        "style": {
+          "font-weight": "bold"
+        },
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229"
+        ]
+      },
+      {
+        "value": -0.5319148936170213,
+        "description": "min=-0.532, mean=-0.532, max=-0.532, sum=-0.532 (1)",
+        "style": {
+          "font-weight": "bold"
+        },
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Claude 3.5 Sonnet (20240620)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.2272727272727273,
+        "markdown": false
+      },
+      {
+        "value": 0.06999999999999995,
+        "description": "min=0.07, mean=0.07, max=0.07, sum=0.07 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620"
+        ]
+      },
+      {
+        "value": -0.37777777777777777,
+        "description": "min=-0.378, mean=-0.378, max=-0.378, sum=-0.378 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Gemini 1.5 Pro (001)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.7272727272727273,
+        "markdown": false
+      },
+      {
+        "value": 0.06000000000000005,
+        "description": "min=0.06, mean=0.06, max=0.06, sum=0.06 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=google_gemini-1.5-pro-001"
+        ]
+      },
+      {
+        "value": -0.4222222222222223,
+        "description": "min=-0.422, mean=-0.422, max=-0.422, sum=-0.422 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=google_gemini-1.5-pro-001"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-3.5 Turbo (0613)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.36363636363636365,
+        "markdown": false
+      },
+      {
+        "value": 0.03,
+        "description": "min=0.03, mean=0.03, max=0.03, sum=0.03 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0613"
+        ]
+      },
+      {
+        "value": -0.36170212765957444,
+        "description": "min=-0.362, mean=-0.362, max=-0.362, sum=-0.362 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0613"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-3.5 Turbo (1106)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.22727272727272727,
+        "markdown": false
+      },
+      {
+        "value": 0.09947368421052628,
+        "description": "min=0.099, mean=0.099, max=0.099, sum=0.099 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-1106"
+        ]
+      },
+      {
+        "value": -0.41666666666666663,
+        "description": "min=-0.417, mean=-0.417, max=-0.417, sum=-0.417 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-1106"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-3.5 Turbo (0125)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.3181818181818182,
+        "markdown": false
+      },
+      {
+        "value": 0.07451612903225806,
+        "description": "min=0.075, mean=0.075, max=0.075, sum=0.075 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125"
+        ]
+      },
+      {
+        "value": -0.41666666666666663,
+        "description": "min=-0.417, mean=-0.417, max=-0.417, sum=-0.417 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-4 Turbo (2024-04-09)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.8636363636363636,
+        "markdown": false
+      },
+      {
+        "value": -0.044999999999999984,
+        "description": "min=-0.045, mean=-0.045, max=-0.045, sum=-0.045 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-4-turbo-2024-04-09"
+        ]
+      },
+      {
+        "value": -0.4222222222222223,
+        "description": "min=-0.422, mean=-0.422, max=-0.422, sum=-0.422 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-4-turbo-2024-04-09"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-4o (2024-05-13)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.40909090909090906,
+        "markdown": false
+      },
+      {
+        "value": 0.050000000000000044,
+        "description": "min=0.05, mean=0.05, max=0.05, sum=0.05 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-4o-2024-05-13"
+        ]
+      },
+      {
+        "value": -0.3913043478260869,
+        "description": "min=-0.391, mean=-0.391, max=-0.391, sum=-0.391 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-4o-2024-05-13"
+        ]
+      }
+    ]
+  ],
+  "links": [
+    {
+      "text": "LaTeX",
+      "href": "benchmark_output/runs/v4/groups/latex/targeted_evaluations_bbq_metrics.tex"
+    },
+    {
+      "text": "JSON",
+      "href": "benchmark_output/runs/v4/groups/json/targeted_evaluations_bbq_metrics.json"
+    }
+  ],
+  "name": "bbq_metrics"
+}

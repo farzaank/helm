@@ -532,6 +532,16 @@
   ],
   "models": [
     {
+      "name": "anthropic/claude-3-haiku-20240307",
+      "display_name": "Claude 3 Haiku (20240307)",
+      "short_display_name": "Claude 3 Haiku (20240307)",
+      "description": "Claude 3 is a a family of models that possess vision and multilingual capabilities. They were trained with various methods such as unsupervised learning and Constitutional AI ([blog](https://www.anthropic.com/news/claude-3-family)).",
+      "creator_organization": "Anthropic",
+      "access": "limited",
+      "todo": false,
+      "release_date": "2024-03-13"
+    },
+    {
       "name": "anthropic/claude-3-opus-20240229",
       "display_name": "Claude 3 Opus (20240229)",
       "short_display_name": "Claude 3 Opus (20240229)",
@@ -593,6 +603,36 @@
       "todo": false,
       "release_date": "2024-04-10",
       "num_parameters": 176000000000
+    },
+    {
+      "name": "openai/gpt-3.5-turbo-0613",
+      "display_name": "GPT-3.5 Turbo (0613)",
+      "short_display_name": "GPT-3.5 Turbo (0613)",
+      "description": "Sibling model of text-davinci-003 that is optimized for chat but works well for traditional completions tasks as well. Snapshot from 2023-06-13.",
+      "creator_organization": "OpenAI",
+      "access": "limited",
+      "todo": false,
+      "release_date": "2023-06-13"
+    },
+    {
+      "name": "openai/gpt-3.5-turbo-1106",
+      "display_name": "GPT-3.5 Turbo (1106)",
+      "short_display_name": "GPT-3.5 Turbo (1106)",
+      "description": "Sibling model of text-davinci-003 that is optimized for chat but works well for traditional completions tasks as well. Snapshot from 2023-11-06.",
+      "creator_organization": "OpenAI",
+      "access": "limited",
+      "todo": false,
+      "release_date": "2024-01-25"
+    },
+    {
+      "name": "openai/gpt-3.5-turbo-0125",
+      "display_name": "GPT-3.5 Turbo (0125)",
+      "short_display_name": "GPT-3.5 Turbo (0125)",
+      "description": "Sibling model of text-davinci-003 that is optimized for chat but works well for traditional completions tasks as well. Snapshot from 2024-01-25.",
+      "creator_organization": "OpenAI",
+      "access": "limited",
+      "todo": false,
+      "release_date": "2023-06-13"
     },
     {
       "name": "openai/gpt-4-turbo-2024-04-09",

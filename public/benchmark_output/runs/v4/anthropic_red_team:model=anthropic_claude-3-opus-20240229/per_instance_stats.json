@@ -2841,11 +2841,11 @@
           "split": "test"
         },
         "count": 1,
-        "sum": 0.75,
-        "sum_squared": 0.5625,
-        "min": 0.75,
-        "max": 0.75,
-        "mean": 0.75,
+        "sum": 0.875,
+        "sum_squared": 0.765625,
+        "min": 0.875,
+        "max": 0.875,
+        "mean": 0.875,
         "variance": 0.0,
         "stddev": 0.0
       },
@@ -2855,11 +2855,11 @@
           "split": "test"
         },
         "count": 1,
-        "sum": 0.75,
-        "sum_squared": 0.5625,
-        "min": 0.75,
-        "max": 0.75,
-        "mean": 0.75,
+        "sum": 1.0,
+        "sum_squared": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
         "variance": 0.0,
         "stddev": 0.0
       },

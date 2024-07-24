@@ -1,0 +1,1563 @@
+{
+  "title": "Accuracy",
+  "header": [
+    {
+      "value": "Model/adapter",
+      "markdown": false,
+      "metadata": {}
+    },
+    {
+      "value": "Mean win rate",
+      "description": "How many models this model outperform on average (over columns).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {}
+    },
+    {
+      "value": "The Pile - BPB",
+      "description": "The Pile corpus for measuring lanugage model performance across various domains [(Gao et al., 2020)](https://arxiv.org/pdf/2101.00027.pdf).\n\nBits/byte: Average number of bits per byte according to model probabilities.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "BPB",
+        "run_group": "The Pile"
+      }
+    },
+    {
+      "value": "TwitterAAE - BPB",
+      "description": "The TwitterAAE corpus of [Blodgett et al. (2016)](https://aclanthology.org/D16-1120/) for measuring language model performance in tweets as a function of speaker dialect.\n\nBits/byte: Average number of bits per byte according to model probabilities.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "BPB",
+        "run_group": "TwitterAAE"
+      }
+    },
+    {
+      "value": "ICE - BPB",
+      "description": "The International Corpus of English (ICE) drawn from English speakers from various places in the world, initiated by [Greenbaum (1991)](https://www.cambridge.org/core/journals/english-today/article/abs/ice-the-international-corpus-of-english/47808205394C538393C3FD8E62E5E701).\n\nBits/byte: Average number of bits per byte according to model probabilities.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "BPB",
+        "run_group": "ICE"
+      }
+    },
+    {
+      "value": "BLiMP - EM",
+      "description": "The Benchmark of Linguistic Minimal Pairs for English (BLiMP) for measuring performance on linguistic phenomena using minimal pair design [(Warstadt et al., 2020)](https://aclanthology.org/2020.tacl-1.25/).\n\nExact match: Fraction of instances that the predicted output matches a correct reference exactly.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "BLiMP"
+      }
+    },
+    {
+      "value": "NaturalQuestions (closed-book) - F1",
+      "description": "The NaturalQuestions [(Kwiatkowski et al., 2019)](https://aclanthology.org/Q19-1026/) benchmark for question answering based on naturally-occurring queries through Google Search. The input does not include the Wikipedia page with the answer.\n\nF1: Average F1 score in terms of word overlap between the model output and correct reference.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "F1",
+        "run_group": "NaturalQuestions (closed-book)"
+      }
+    },
+    {
+      "value": "HellaSwag - EM",
+      "description": "The HellaSwag benchmark for commonsense reasoning in question answering [(Zellers et al., 2019)](https://aclanthology.org/P19-1472/).\n\nExact match: Fraction of instances that the predicted output matches a correct reference exactly.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "HellaSwag"
+      }
+    },
+    {
+      "value": "OpenbookQA - EM",
+      "description": "The OpenbookQA benchmark for commonsense-intensive open book question answering [(Mihaylov et al., 2018)](https://aclanthology.org/D18-1260/).\n\nExact match: Fraction of instances that the predicted output matches a correct reference exactly.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "OpenbookQA"
+      }
+    },
+    {
+      "value": "TruthfulQA - EM",
+      "description": "The TruthfulQA benchmarking for measuring model truthfulness and commonsense knowledge in question answering [(Lin et al., 2022)](https://aclanthology.org/2022.acl-long.229/).\n\nExact match: Fraction of instances that the predicted output matches a correct reference exactly.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "TruthfulQA"
+      }
+    },
+    {
+      "value": "MMLU - EM",
+      "description": "The Massive Multitask Language Understanding (MMLU) benchmark for knowledge-intensive question answering across 57 domains [(Hendrycks et al., 2021)](https://openreview.net/forum?id=d7KBjmI3GmQ).\n\nExact match: Fraction of instances that the predicted output matches a correct reference exactly.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "MMLU"
+      }
+    },
+    {
+      "value": "WikiFact - EM",
+      "description": "Scenario introduced in this work, inspired by [Petroni et al. (2019)](https://aclanthology.org/D19-1250/), to more extensively test factual knowledge.\n\nQuasi-exact match: Fraction of instances that the predicted output matches a correct reference up to light processing.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "WikiFact"
+      }
+    },
+    {
+      "value": "Synthetic reasoning (abstract symbols) - EM",
+      "description": "Synthetic reasoning tasks defined using abstract symbols based on LIME [(Wu et al., 2021)](https://proceedings.mlr.press/v139/wu21c.html).\n\nQuasi-exact match: Fraction of instances that the predicted output matches a correct reference up to light processing.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "Synthetic reasoning (abstract symbols)"
+      }
+    },
+    {
+      "value": "Synthetic reasoning (natural language) - F1",
+      "description": "Synthetic reasoning tasks defined using simple natural language based on LIME [(Wu et al., 2021)](https://proceedings.mlr.press/v139/wu21c.html).\n\nF1 (set match): Average F1 score in terms of set overlap between the model predicted set and correct reference set.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "F1",
+        "run_group": "Synthetic reasoning (natural language)"
+      }
+    },
+    {
+      "value": "bAbI - EM",
+      "description": "The bAbI benchmark for measuring understanding and reasoning [(Weston et al., 2015)](https://arxiv.org/pdf/1502.05698.pdf).\n\nQuasi-exact match: Fraction of instances that the predicted output matches a correct reference up to light processing.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "bAbI"
+      }
+    },
+    {
+      "value": "Dyck - EM",
+      "description": "Scenario testing hierarchical reasoning through the Dyck formal languages [(Suzgun et al., 2019)](https://aclanthology.org/W19-3905/).\n\nExact match (final): Fraction of instances that the predicted output matches a correct reference exactly, ignoring text preceding the specified indicator (e.g., space).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "Dyck"
+      }
+    },
+    {
+      "value": "GSM8K - EM",
+      "description": "The grade school math word problems dataset (GSM8K) for testing mathematical reasoning on grade-school math problems [(Cobbe et al., 2021)](https://arxiv.org/pdf/2110.14168.pdf).\n\nExact match (final): Fraction of instances that the predicted output matches a correct reference exactly, ignoring text preceding the specified indicator (e.g., space).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "GSM8K"
+      }
+    },
+    {
+      "value": "MATH - Equivalent",
+      "description": "The MATH benchmark for measuring mathematical problem solving on competition math problems [(Hendrycks et al., 2021)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/be83ab3ecd0db773eb2dc1b0a17836a1-Abstract-round2.html).\n\nEquivalent: Fraction of model outputs that are mathematically equivalent to the correct reference.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Equivalent",
+        "run_group": "MATH"
+      }
+    },
+    {
+      "value": "MATH (chain-of-thought) - Equivalent (chain of thought)",
+      "description": "The MATH benchmark for measuring mathematical problem solving on competition math problems with chain-of-thought style reasoning [(Hendrycks et al., 2021)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/be83ab3ecd0db773eb2dc1b0a17836a1-Abstract-round2.html).\n\nEquivalent (chain of thought): Fraction of model outputs that are mathematically equivalent to the correct reference when using chain-of-thought prompting.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Equivalent (chain of thought)",
+        "run_group": "MATH (chain-of-thought)"
+      }
+    },
+    {
+      "value": "HumanEval (Code) - pass@1",
+      "description": "The HumanEval benchmark for measuring functional correctness for synthesizing programs from docstrings [(Chen et al., 2021)](https://arxiv.org/pdf/2107.03374.pdf).\n\npass@1: Fraction of model outputs that pass the associated test cases.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "pass@1",
+        "run_group": "HumanEval (Code)"
+      }
+    },
+    {
+      "value": "LSAT - EM",
+      "description": "The LSAT benchmark for measuring analytical reasoning on the Law School Admission Test (LSAT; [Zhong et al., 2021](https://arxiv.org/pdf/2104.06598.pdf)).\n\nQuasi-exact match: Fraction of instances that the predicted output matches a correct reference up to light processing.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "LSAT"
+      }
+    },
+    {
+      "value": "LegalSupport - EM",
+      "description": "Scenario introduced in this work to measure fine-grained legal reasoning through reverse entailment.\n\nQuasi-exact match: Fraction of instances that the predicted output matches a correct reference up to light processing.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "LegalSupport"
+      }
+    },
+    {
+      "value": "Data imputation - EM",
+      "description": "Scenario from [Mei et al. (2021)](https://ieeexplore.ieee.org/document/9458712/) that tests the ability to impute missing entities in a data table.\n\nQuasi-exact match: Fraction of instances that the predicted output matches a correct reference up to light processing.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "Data imputation"
+      }
+    },
+    {
+      "value": "Entity matching - EM",
+      "description": "Scenario from Magellan [(Konda et al., 2016)](https://dl.acm.org/doi/10.14778/3007263.3007314) that tests the ability to determine if two entities match.\n\nQuasi-exact match: Fraction of instances that the predicted output matches a correct reference up to light processing.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "Entity matching"
+      }
+    },
+    {
+      "value": "BBQ - EM",
+      "description": "The Bias Benchmark for Question Answering (BBQ) for measuring social bias in question answering in ambiguous and unambigous context [(Parrish et al., 2022)](https://aclanthology.org/2022.findings-acl.165/).\n\nQuasi-exact match: Fraction of instances that the predicted output matches a correct reference up to light processing.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "BBQ"
+      }
+    }
+  ],
+  "rows": [
+    [
+      {
+        "value": "Llama 3 Instruct (70B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.45454545454545453,
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "value": 0.89,
+        "description": "min=0.89, mean=0.89, max=0.89, sum=0.89 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-70b-chat"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Llama 3 Instruct (8B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.09090909090909091,
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "value": 0.72,
+        "description": "min=0.72, mean=0.72, max=0.72, sum=0.72 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-8b-chat"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Mixtral Instruct (8x22B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.6363636363636364,
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "value": 0.92,
+        "description": "min=0.92, mean=0.92, max=0.92, sum=0.92 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=mistralai_mixtral-8x22b-instruct-v0.1"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Qwen2 Instruct (72B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.9090909090909091,
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "value": 0.95,
+        "description": "min=0.95, mean=0.95, max=0.95, sum=0.95 (1)",
+        "style": {
+          "font-weight": "bold"
+        },
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=qwen_qwen2-72b-instruct"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Claude 3 Opus (20240229)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.18181818181818182,
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "value": 0.76,
+        "description": "min=0.76, mean=0.76, max=0.76, sum=0.76 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Claude 3.5 Sonnet (20240620)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.7272727272727273,
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "value": 0.93,
+        "description": "min=0.93, mean=0.93, max=0.93, sum=0.93 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Gemini 1.5 Pro (001)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.8181818181818182,
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "value": 0.94,
+        "description": "min=0.94, mean=0.94, max=0.94, sum=0.94 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=google_gemini-1.5-pro-001"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-3.5 Turbo (0613)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.36363636363636365,
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "value": 0.88,
+        "description": "min=0.88, mean=0.88, max=0.88, sum=0.88 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0613"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-3.5 Turbo (1106)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.2727272727272727,
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "value": 0.79,
+        "description": "min=0.79, mean=0.79, max=0.79, sum=0.79 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-1106"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-3.5 Turbo (0125)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.0,
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "value": 0.67,
+        "description": "min=0.67, mean=0.67, max=0.67, sum=0.67 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-4 Turbo (2024-04-09)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.5454545454545454,
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "value": 0.91,
+        "description": "min=0.91, mean=0.91, max=0.91, sum=0.91 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-4-turbo-2024-04-09"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-4o (2024-05-13)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 1.0,
+        "style": {
+          "font-weight": "bold"
+        },
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "value": 0.95,
+        "description": "min=0.95, mean=0.95, max=0.95, sum=0.95 (1)",
+        "style": {
+          "font-weight": "bold"
+        },
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-4o-2024-05-13"
+        ]
+      }
+    ]
+  ],
+  "links": [
+    {
+      "text": "LaTeX",
+      "href": "benchmark_output/runs/v4/groups/latex/targeted_evaluations_accuracy.tex"
+    },
+    {
+      "text": "JSON",
+      "href": "benchmark_output/runs/v4/groups/json/targeted_evaluations_accuracy.json"
+    }
+  ],
+  "name": "accuracy"
+}

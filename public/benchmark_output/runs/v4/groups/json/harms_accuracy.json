@@ -1,0 +1,287 @@
+{
+  "title": "Accuracy",
+  "header": [
+    {
+      "value": "Model/adapter",
+      "markdown": false,
+      "metadata": {}
+    },
+    {
+      "value": "Mean win rate",
+      "description": "How many models this model outperform on average (over columns).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {}
+    },
+    {
+      "value": "BBQ - EM",
+      "description": "The Bias Benchmark for Question Answering (BBQ) for measuring social bias in question answering in ambiguous and unambigous context [(Parrish et al., 2022)](https://aclanthology.org/2022.findings-acl.165/).\n\nQuasi-exact match: Fraction of instances that the predicted output matches a correct reference up to light processing.",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "EM",
+        "run_group": "BBQ"
+      }
+    }
+  ],
+  "rows": [
+    [
+      {
+        "value": "Llama 3 Instruct (70B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.45454545454545453,
+        "markdown": false
+      },
+      {
+        "value": 0.89,
+        "description": "min=0.89, mean=0.89, max=0.89, sum=0.89 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-70b-chat"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Llama 3 Instruct (8B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.09090909090909091,
+        "markdown": false
+      },
+      {
+        "value": 0.72,
+        "description": "min=0.72, mean=0.72, max=0.72, sum=0.72 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=meta_llama-3-8b-chat"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Mixtral Instruct (8x22B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.6363636363636364,
+        "markdown": false
+      },
+      {
+        "value": 0.92,
+        "description": "min=0.92, mean=0.92, max=0.92, sum=0.92 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=mistralai_mixtral-8x22b-instruct-v0.1"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Qwen2 Instruct (72B)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.9090909090909091,
+        "markdown": false
+      },
+      {
+        "value": 0.95,
+        "description": "min=0.95, mean=0.95, max=0.95, sum=0.95 (1)",
+        "style": {
+          "font-weight": "bold"
+        },
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=qwen_qwen2-72b-instruct"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Claude 3 Opus (20240229)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.18181818181818182,
+        "markdown": false
+      },
+      {
+        "value": 0.76,
+        "description": "min=0.76, mean=0.76, max=0.76, sum=0.76 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Claude 3.5 Sonnet (20240620)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.7272727272727273,
+        "markdown": false
+      },
+      {
+        "value": 0.93,
+        "description": "min=0.93, mean=0.93, max=0.93, sum=0.93 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "Gemini 1.5 Pro (001)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.8181818181818182,
+        "markdown": false
+      },
+      {
+        "value": 0.94,
+        "description": "min=0.94, mean=0.94, max=0.94, sum=0.94 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=google_gemini-1.5-pro-001"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-3.5 Turbo (0613)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.36363636363636365,
+        "markdown": false
+      },
+      {
+        "value": 0.88,
+        "description": "min=0.88, mean=0.88, max=0.88, sum=0.88 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0613"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-3.5 Turbo (1106)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.2727272727272727,
+        "markdown": false
+      },
+      {
+        "value": 0.79,
+        "description": "min=0.79, mean=0.79, max=0.79, sum=0.79 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-1106"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-3.5 Turbo (0125)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.0,
+        "markdown": false
+      },
+      {
+        "value": 0.67,
+        "description": "min=0.67, mean=0.67, max=0.67, sum=0.67 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-4 Turbo (2024-04-09)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 0.5454545454545454,
+        "markdown": false
+      },
+      {
+        "value": 0.91,
+        "description": "min=0.91, mean=0.91, max=0.91, sum=0.91 (1)",
+        "style": {},
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-4-turbo-2024-04-09"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "GPT-4o (2024-05-13)",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "value": 1.0,
+        "style": {
+          "font-weight": "bold"
+        },
+        "markdown": false
+      },
+      {
+        "value": 0.95,
+        "description": "min=0.95, mean=0.95, max=0.95, sum=0.95 (1)",
+        "style": {
+          "font-weight": "bold"
+        },
+        "markdown": false,
+        "run_spec_names": [
+          "bbq:subject=all,method=multiple_choice_joint,model=openai_gpt-4o-2024-05-13"
+        ]
+      }
+    ]
+  ],
+  "links": [
+    {
+      "text": "LaTeX",
+      "href": "benchmark_output/runs/v4/groups/latex/harms_accuracy.tex"
+    },
+    {
+      "text": "JSON",
+      "href": "benchmark_output/runs/v4/groups/json/harms_accuracy.json"
+    }
+  ],
+  "name": "accuracy"
+}
