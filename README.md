@@ -1,4 +1,4 @@
-## React Frontend for HELM
+## React Frontend for HELM Safety
 
 This directory contains the files for building and developing an alternative React based frontend for HELM. If you are looking for the current frontend deployed to https://crfm.stanford.edu/helm/latest/ you will want to look in `helm/benchmark/static` and `helm/benchmark/proxy/static`. If you are looking to make changes to the alternative React frontend, then you are in the correct place.
 
